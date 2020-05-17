@@ -20,6 +20,136 @@
 
 <body>
     <div class="interface">
+        <section class="haut-page">
+            <nav class="nav-user">
+                <p><a href=""><span>FR</span></a> | <a href="">EN</a></p>
+                <a href="" class="user-icon"><i class="fas fa-user"></i></a>
+                <a href="" class="panier-icon"><i class="fas fa-shopping-cart"></i></a>
+            </nav>
+            <div class="logo-haut">
+                <a href="index.html"><img class="logo-normal" src="../images/svg/logo-normal.svg"
+                        alt="Logo L'Antre du Vinyle"></a>
+            </div>
+        </section>
+
+        <nav class="nav-principale">
+            <ul class="menu">
+                <a href="index.html">
+                    <li>Accueil</li>
+                </a>
+                <a href="index.html#nos-vinyles">
+                    <li>Nos vinyles</li>
+                </a>
+
+                <li>Commander</li>
+
+                <ul class="sous-menu">
+                    <a href="index.html#commander">
+                        <li>Comment commander</li>
+                    </a>
+                    <a href="index.html#livraison">
+                        <li>Livraison</li>
+                    </a>
+                </ul>
+                <a href="index.html#promotion">
+                    <li>Promotions</li>
+                </a>
+                <li>À propos</li>
+                <ul class="sous-menu">
+                    <a href="index.html#heures">
+                        <li>Heures d'ouverture</li>
+                    </a>
+                    <a href="index.html#entreprise">
+                        <li>L'entreprise</li>
+                    </a>
+                </ul>
+            </ul>
+            <button class="bouton-remonter" onclick="hautPage()" id="bouton-remonter" title="Haut de la page"><i
+                    class="fas fa-chevron-circle-up"></i></button>
+        </nav>
+
+        <header>
+        </header>
+
+        <section class="vinyles-intro">
+            <h2><span></span></h2>
+        </section>
+
+        <section class="ariane"></section>
+
+        <section class="liste-vinyles"></section>
+
+        <section class="commander">
+            <h2><span>Comment commander</span></h2>
+            <div class="commander-etapes">
+                <ul>
+                    <li><span>1.</span>Ajouter les articles désirés au panier.</li>
+                    <li><span>2.</span>Consulter votre liste d’achats en cliquant sur l’icône du
+                        panier et confirmer l’envoi du bon de commande.</li>
+                    <li><span>3.</span>Un de nos représentants vous contactera pour procéder
+                        au paiement par téléphone ou virement Interac.</li>
+                    <li><span>4.</span>La marchandise vous sera livrée à domicile dans les
+                        plus brefs délais.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="livraison">
+            <h2><span>Livraison</span></h2>
+            <div class="livraison-container">
+                <div class="livraison-texte">
+                    <p>Nous offrons la livraison dans un rayon de 15 km à partir de notre magasin à Bois-des-filion.
+                        Faites-vous partie du rayon admissible pour la livraison de vos achats? </p>
+                    <p>Découvrez-le ici en insérant votre code postal.</p>
+                    <form action="">
+                        <input type="text" id="codepostal" name="codepostal" placeholder="Votre code postal">
+                        <input class="bouton-form" type="submit"
+                            onclick="alert('Vous êtes admissible pour la livraison!')" value="Vérifier">
+                    </form>
+                </div>
+                <div class="livraison-image">
+                    <img class="livraison-image" alt="Boîte de livraison" src="../images/couches/boite-300.png" srcset="../images/couches/boite-300.png 300w,
+                        ../images/couches/boite-600.png 600w,
+                        ../images/couches/boite-900.png 900w"
+                        sizes="(max-width: 1024px) 150px, (max-width: 1200px) 300px, (max-width: 1800px) 400px, 500px">
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <h2 class="ligne"></h2>
+            <div class="footer-container">
+                <div class="footer-contact">
+                    <a href="index.html"><img class="logo-blanc" src="../images/svg/logo-blanc.svg"
+                            alt="Logo L'Antre du Vinyle"></a>
+                    <p>382 Boulevard Adolphe-Chapleau, Bois-des-Filion, QC J6Z 1H3</p>
+                    <a href="mailto: lantreduvinyle@gmail.com"><i class="fas fa-envelope"></i>
+                        lantreduvinyle@gmail.com</a>
+                    <a href="tel:123-456-7890"><i class="fas fa-phone-alt"></i> (450) 621-8565</a>
+                    <div class="reseaux-sociaux">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-questions">
+                    <h3>Écrivez-nous !</h3>
+                    <p>Vous avez des questions ou des commentaires à propos de nos articles ou de notre service? Vous
+                        souhaitez rejoindre notre équipe? Remplissez le formulaire ci-dessous et nous nous ferons un
+                        plaisir de vous répondre.</p>
+                    <form action="">
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                        <input type="text" id="courriel" name="courriel" placeholder="Votre adresse courriel">
+                        <textarea name="message" id="message" placeholder="Écrivez quelque chose ici..."></textarea>
+                        <input class="bouton-form" type="submit" value="Envoyer">
+                    </form>
+                </div>
+            </div>
+            <h2 class="ligne"></h2>
+            <p class="copyright">©CSTJ | Techniques d'intégration multimédia 2020</br>Myriam Gauthier Fréchette -
+                Travail synthèse Web & Assemblage des médias</p>
+        </footer>
 
     </div>
 
