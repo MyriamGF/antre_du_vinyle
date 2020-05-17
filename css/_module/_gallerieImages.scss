@@ -4,3 +4,10 @@
 //             _gallerieImages.scss                   //
 //----------------------------------------------------//
 
+.carrousel-vignettes .slick-slide {
+	opacity: 0.5;
+}
+
+.carrousel-vignettes .slick-slide.vignette-active {
+	opacity: 1;
+}
