@@ -3,3 +3,30 @@
 //               // GRILLE DESKTOP //                 //
 //               _grilleDesktop.scss                  //
 //----------------------------------------------------//
+
+/*////[Code SCSS structure GRID des pages de l'admin]
+________________________________________________________*/
+
+.interface-admin {
+    display: grid;
+    grid-template-areas:
+        'nav page page page page page page';
+    grid-template-columns: 300px 1fr;
+
+    &>.nav-admin {
+        grid-area: nav;
+        background-color: var(--blanc);
+        height: 100%;
+        padding: 3em;
+    }
+
+    &>.page-admin {
+        grid-area: page;
+        background-color: var(--gris-pale);
+        height: 100vh;
+    }
+}
+
+
+/*////[Code SCSS structure GRID des pages user]
+________________________________________________________*/
