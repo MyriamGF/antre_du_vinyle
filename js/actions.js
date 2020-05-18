@@ -18,3 +18,6 @@ function hautPage() {
   document.body.scrollTop = 0; // Pour Safari
   document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
 }
+
+
+// ----- ADMIN POP-UP SUPPRIMER ----- //
