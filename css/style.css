@@ -1,4 +1,23 @@
 @charset "UTF-8";
+/*////[Variable de couleurs]
+________________________________________________________*/
+:root {
+  /*[Blanc]*/
+  --blanc: hsl(0, 0%, 100%);
+  /*[Noir]*/
+  --noir: hsl(0, 0%, 0%);
+  /*[Gris]*/
+  --gris: hsl(0, 0%, 14%);
+  --gris-pale: hsl(240, 5%, 93%);
+  --gris-fonce: hsl(0, 0%, 7%);
+  /*[Rouge]*/
+  --rouge: hsl(7, 80%, 64%);
+  /*[Jaune]*/
+  --jaune: hsl(57, 72%, 85%);
+  /*[Bleu]*/
+  --bleu: hsl(172, 23%, 68%);
+}
+
 /*////[Reset CSS pré-fait converti en SCSS]
 ________________________________________________________*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -80,6 +99,10 @@ a:visited {
   color: inherit;
 }
 
+/*////[Mixins pour flex]
+________________________________________________________*/
+/*[Display flex en colonne]*/
+/*[Display flex en rangée]*/
 .bouton-remonter {
   display: none;
   position: fixed;
