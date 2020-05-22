@@ -20,13 +20,17 @@
 
 <body>
     <div class="connexion-admin">
-        <a href="index.html"><img src="../images/svg/logo-normal.svg" alt="Logo l'Antre du Vinyle"></a>
+        <img src="../images/svg/logo-normal.svg" alt="Logo l'Antre du Vinyle">
         <h1>Module de gestion du site</h1>
         <form action="index.html">
-            <i class="fas fa-user-circle"></i>
-            <input type="text" placeholder="Nom d'utilisateur">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Mot de passe">
+            <div class="groupe-champ">
+                <label for="nom-admin"><i class="fas fa-user-circle"></i></label>
+                <input class="champ" id="nom-admin" type="text" placeholder="Nom d'utilisateur">
+            </div>
+            <div class="groupe-champ">
+                <label for="mdp-admin"><i class="fas fa-lock"></i></label>
+                <input class="champ" id="mdp-admin" type="password" placeholder="Mot de passe">
+            </div>
             <input class="bouton-form" type="submit" value="Se connecter">
             <a href="">Mot de passe oublié?</a>
         </form>

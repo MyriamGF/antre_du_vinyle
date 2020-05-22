@@ -3,3 +3,65 @@
 //                 // CONNEXION //                    //
 //                 _connexion.scss                    //
 //----------------------------------------------------//
+
+/*////[Code SCSS connexion admin]
+________________________________________________________*/
+
+.connexion-admin {
+    @include flex-column;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+    &>img {
+        width: 350px;
+        margin-bottom: 2rem;
+    }
+
+    &>h1 {
+        font-weight: 500;
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    &>form {
+        align-items: center;
+        justify-content: center;
+
+        &>.groupe-champ {
+            @include flex-row;
+            margin-bottom: 2rem;
+
+            &>label {
+                font-size: 2rem;
+                color: var(--bleu);
+                margin-right: .5rem;
+            }
+
+            &>.champ {
+                padding: .5em;
+                border: none;
+                border-bottom: 1.5px solid var(--bleu);
+                width: 350px;
+
+                &::placeholder {
+                    text-transform: uppercase;
+                    color: var(--gris-moyen);
+
+                }
+            }
+        }
+
+        &>a {
+            color: var(--rouge);
+            margin-top: 2rem;
+            transition: color .5s;
+
+            &:hover {
+                color: var(--noir);
+            }
+        }
+    }
+
+}
