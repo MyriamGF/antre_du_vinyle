@@ -40,6 +40,7 @@ ________________________________________________________*/
             text-align: center;
             font-size: 1.5rem;
             font-weight: 600;
+            margin-bottom: 2rem;
         }
 
         &>section {
@@ -48,10 +49,10 @@ ________________________________________________________*/
             justify-items: baseline;
             background: var(--blanc);
             padding: 2em;
-            margin: 1rem;
+            margin-bottom: 1rem;
             width: 100%;
 
-            &:hover > p {
+            &:hover>p {
                 color: var(--bleu);
             }
 
@@ -79,26 +80,87 @@ ________________________________________________________*/
                 }
             }
         }
-    }
-}
 
-.bouton {
-    width: 200px;
-    padding: 1em;
-    background-color: var(--blanc);
-    border: none;
-    border-radius: 60px;
-    text-transform: uppercase;
-    box-shadow: 0 10px 20px var(--gris-moyen);
-    color: var(--bleu) !important;
-    font-weight: 600;
-    font-size: .8rem;
-    transition: box-shadow .5s, color .3s, background-color .5s;
-    text-align: center;
+        &>form {
+            padding: 2em;
+            width: 50vw;
+            align-items: center;
+            background: var(--blanc);
 
-    &:hover {
-        box-shadow: none;
-        color: var(--blanc) !important;
-        background-color: var(--bleu);
+            &>.groupe-champ {
+                width: 70%;
+
+                &>label {
+                    font-weight: 500;
+                }
+
+                &>input {
+                    width: 300px;
+                    margin-left: auto;
+
+                    &.duree {
+                        text-align: center;
+                        width: 149px;
+
+                        &:last-of-type {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    margin: 3rem 0;
+
+                    &>.input-image {
+                        position: relative;
+                        margin-left: 7rem;
+
+                        &>.cherche-image {
+                            position: relative;
+                            text-align: right;
+                            opacity: 0;
+                            z-index: 2;
+
+                            &:hover+.fake-input-image>.bouton {
+                                box-shadow: none;
+                                color: var(--blanc) !important;
+                                background-color: var(--bleu);
+                            }
+                        }
+
+                        &>.fake-input-image {
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+
+            &>.bouton-form:first-of-type {
+                z-index: 2;
+                color: var(--blanc);
+                background-color: var(--rouge);
+                margin-bottom: .8rem;
+
+                &:hover {
+                    color: var(--blanc);
+                    background-color: rgb(106, 214, 139);
+                }
+            }
+
+            &>.bouton {
+                z-index: 1;
+                color: var(--gris-moyen) !important;
+                background-color: var(--blanc);
+                box-shadow: none;
+
+                &:hover {
+                    color: var(--rouge) !important;
+                    background-color: var(--blanc);
+                }
+            }
+        }
     }
 }

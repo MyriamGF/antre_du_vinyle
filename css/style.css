@@ -413,6 +413,7 @@ ________________________________________________________*/
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 .page-admin > .contenu > section {
@@ -429,7 +430,7 @@ ________________________________________________________*/
   justify-items: baseline;
   background: var(--blanc);
   padding: 2em;
-  margin: 1rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -468,6 +469,94 @@ ________________________________________________________*/
   margin-bottom: 1rem;
 }
 
+.page-admin > .contenu > form {
+  padding: 2em;
+  width: 50vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--blanc);
+}
+
+.page-admin > .contenu > form > .groupe-champ {
+  width: 70%;
+}
+
+.page-admin > .contenu > form > .groupe-champ > label {
+  font-weight: 500;
+}
+
+.page-admin > .contenu > form > .groupe-champ > input {
+  width: 300px;
+  margin-left: auto;
+}
+
+.page-admin > .contenu > form > .groupe-champ > input.duree {
+  text-align: center;
+  width: 149px;
+}
+
+.page-admin > .contenu > form > .groupe-champ > input.duree:last-of-type {
+  margin-left: 0;
+}
+
+.page-admin > .contenu > form > .groupe-champ:last-of-type {
+  margin: 3rem 0;
+}
+
+.page-admin > .contenu > form > .groupe-champ:last-of-type > .input-image {
+  position: relative;
+  margin-left: 7rem;
+}
+
+.page-admin > .contenu > form > .groupe-champ:last-of-type > .input-image > .cherche-image {
+  position: relative;
+  text-align: right;
+  opacity: 0;
+  z-index: 2;
+}
+
+.page-admin > .contenu > form > .groupe-champ:last-of-type > .input-image > .cherche-image:hover + .fake-input-image > .bouton {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: var(--blanc) !important;
+  background-color: var(--bleu);
+}
+
+.page-admin > .contenu > form > .groupe-champ:last-of-type > .input-image > .fake-input-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.page-admin > .contenu > form > .bouton-form:first-of-type {
+  z-index: 2;
+  color: var(--blanc);
+  background-color: var(--rouge);
+  margin-bottom: .8rem;
+}
+
+.page-admin > .contenu > form > .bouton-form:first-of-type:hover {
+  color: var(--blanc);
+  background-color: #6ad68b;
+}
+
+.page-admin > .contenu > form > .bouton {
+  z-index: 1;
+  color: var(--gris-moyen) !important;
+  background-color: var(--blanc);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.page-admin > .contenu > form > .bouton:hover {
+  color: var(--rouge) !important;
+  background-color: var(--blanc);
+}
+
+/*////[Code SCSS général pour les boutons]
+________________________________________________________*/
 .bouton {
   width: 200px;
   padding: 1em;
@@ -491,6 +580,33 @@ ________________________________________________________*/
   -webkit-box-shadow: none;
           box-shadow: none;
   color: var(--blanc) !important;
+  background-color: var(--bleu);
+}
+
+.bouton-form {
+  cursor: pointer;
+  text-align: center;
+  width: 200px;
+  padding: 1em;
+  background-color: var(--blanc);
+  border: none;
+  border-radius: 60px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 10px 20px var(--gris-moyen);
+          box-shadow: 0 10px 20px var(--gris-moyen);
+  color: var(--bleu);
+  font-weight: 600;
+  -webkit-transition: color .3s, background-color .5s, -webkit-box-shadow .5s;
+  transition: color .3s, background-color .5s, -webkit-box-shadow .5s;
+  transition: box-shadow .5s, color .3s, background-color .5s;
+  transition: box-shadow .5s, color .3s, background-color .5s, -webkit-box-shadow .5s;
+  font-family: 'Raleway', sans-serif;
+}
+
+.bouton-form:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: var(--blanc);
   background-color: var(--bleu);
 }
 
@@ -536,13 +652,6 @@ ________________________________________________________*/
 }
 
 .connexion-admin > form > .groupe-champ {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   margin-bottom: 2rem;
 }
 
@@ -553,36 +662,7 @@ ________________________________________________________*/
 }
 
 .connexion-admin > form > .groupe-champ > .champ {
-  padding: .5em;
-  border: none;
-  border-bottom: 1.5px solid var(--bleu);
   width: 350px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
-}
-
-.connexion-admin > form > .groupe-champ > .champ::-webkit-input-placeholder {
-  font-size: .7rem;
-  text-transform: uppercase;
-  color: var(--gris-moyen);
-}
-
-.connexion-admin > form > .groupe-champ > .champ:-ms-input-placeholder {
-  font-size: .7rem;
-  text-transform: uppercase;
-  color: var(--gris-moyen);
-}
-
-.connexion-admin > form > .groupe-champ > .champ::-ms-input-placeholder {
-  font-size: .7rem;
-  text-transform: uppercase;
-  color: var(--gris-moyen);
-}
-
-.connexion-admin > form > .groupe-champ > .champ::placeholder {
-  font-size: .7rem;
-  text-transform: uppercase;
-  color: var(--gris-moyen);
 }
 
 .connexion-admin > form > a {
@@ -618,35 +698,56 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-form input {
-  font-family: 'Raleway', sans-serif;
+form > .groupe-champ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.bouton-form {
-  cursor: pointer;
-  width: 200px;
-  padding: 1em;
-  background-color: var(--blanc);
+form > .groupe-champ > input {
+  padding: .5em;
   border: none;
-  border-radius: 60px;
-  text-transform: uppercase;
-  -webkit-box-shadow: 0 10px 20px var(--gris-moyen);
-          box-shadow: 0 10px 20px var(--gris-moyen);
-  color: var(--bleu);
-  font-weight: 600;
-  -webkit-transition: color .3s, background-color .5s, -webkit-box-shadow .5s;
-  transition: color .3s, background-color .5s, -webkit-box-shadow .5s;
-  transition: box-shadow .5s, color .3s, background-color .5s;
-  transition: box-shadow .5s, color .3s, background-color .5s, -webkit-box-shadow .5s;
+  border-bottom: 1.5px solid var(--bleu);
   font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
 }
 
-.bouton-form:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: var(--blanc);
-  background-color: var(--bleu);
+form > .groupe-champ > input::-webkit-input-placeholder {
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: var(--gris-moyen);
+}
+
+form > .groupe-champ > input:-ms-input-placeholder {
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: var(--gris-moyen);
+}
+
+form > .groupe-champ > input::-ms-input-placeholder {
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: var(--gris-moyen);
+}
+
+form > .groupe-champ > input::placeholder {
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: var(--gris-moyen);
 }
 /*# sourceMappingURL=style.css.map */

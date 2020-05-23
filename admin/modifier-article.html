@@ -73,29 +73,45 @@
             <div class="contenu">
                 <h3>Modifier un article</h3>
                 <form action="">
-                    <label for="album">Nom de l'album</label>
-                    <input id="album" type="text" value="Game, Dames and Guitar Thangs">
-                    <label for="artiste">Nom de l'artiste</label>
-                    <input id="artiste" type="text" value="Eddie Hazel">
-                    <label for="genre">Genre</label>
-                    <input id="genre" type="text" value="Psychedelic soul, funk, hard rock">
-                    <label for="sortie">Sortie de l'album</label>
-                    <input id="sortie" type="date" value="1977-07-29">
-                    <label for="duree">Durée en minutes</label>
-                    <input id="duree" type="number" min="0" max="100" value="38">:
-                    <input id="duree" type="number" min="0" max="60" value="06">
-                    <label for="prix">Prix</label>
-                    <input id="prix" type="text" value="229.99">
-                    <label for="quantite">Quantité en stock</label>
-                    <input id="quantite" type="number" min="1" value="2">
-                    <label for="images">Images</label>
-                    <div class="input-image">
-                        <input class="cherche-image" type="file" id="images" accept="image/*" multiple>
-                        <div class="fake-input-image">
-                            <div class="bouton-form">Ajouter des images</div>
+                    <div class="groupe-champ">
+                        <label for="album">Nom de l'album</label>
+                        <input id="album" type="text" value="Game, Dames and Guitar Thangs">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="artiste">Nom de l'artiste</label>
+                        <input id="artiste" type="text" value="Eddie Hazel">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="genre">Genre</label>
+                        <input id="genre" type="text" value="Psychedelic soul, funk, hard rock">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="sortie">Sortie de l'album</label>
+                        <input id="sortie" type="date" value="1977-07-29">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="duree">Durée en minutes</label>
+                        <input class="duree" id="duree" type="number" min="0" max="100" value="38">:<input class="duree" id="duree" type="number" min="0" max="60" value="06">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="prix">Prix</label>
+                        <input id="prix" type="text" value="229.99">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="quantite">Quantité en stock</label>
+                        <input id="quantite" type="number" min="1" value="2">
+                    </div>
+                    <div class="groupe-champ">
+                        <label for="images">Images</label>
+                        <div class="input-image">
+                            <input class="cherche-image" type="file" id="images" accept="image/*" multiple>
+                            <div class="fake-input-image">
+                                <a class="bouton">Ajouter des images</a>
+                            </div>
                         </div>
                     </div>
                     <input class="bouton-form" type="submit" value="Modifier l'article">
+                    <a href="liste-articles.html" class="bouton">Annuler</a>
                 </form>
             </div>
         </div>

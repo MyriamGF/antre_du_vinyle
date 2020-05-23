@@ -1,0 +1,51 @@
+//----------------------------------------------------//
+//                                                    //
+//                  // BOUTONS //                     //
+//                  _boutons.scss                     //
+//----------------------------------------------------//
+
+/*////[Code SCSS général pour les boutons]
+________________________________________________________*/
+
+.bouton {
+    width: 200px;
+    padding: 1em;
+    background-color: var(--blanc);
+    border: none;
+    border-radius: 60px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px var(--gris-moyen);
+    color: var(--bleu) !important;
+    font-weight: 600;
+    font-size: .8rem;
+    transition: box-shadow .5s, color .3s, background-color .5s;
+    text-align: center;
+
+    &:hover {
+        box-shadow: none;
+        color: var(--blanc) !important;
+        background-color: var(--bleu);
+    }
+}
+
+.bouton-form {
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    padding: 1em;
+    background-color: var(--blanc);
+    border: none;
+    border-radius: 60px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px var(--gris-moyen);
+    color: var(--bleu);
+    font-weight: 600;
+    transition: box-shadow .5s, color .3s, background-color .5s;
+    font-family: 'Raleway', sans-serif;
+
+    &:hover {
+        box-shadow: none;
+        color: var(--blanc);
+        background-color: var(--bleu);
+    }
+}
