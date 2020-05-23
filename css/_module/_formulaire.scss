@@ -9,6 +9,10 @@ ________________________________________________________*/
 
 form {
     @include flex-column;
+    
+    input{
+        font-family: 'Raleway', sans-serif;
+    }
 }
 
 .bouton-form {
@@ -23,12 +27,13 @@ form {
     color: var(--bleu);
     font-weight: 600;
     transition: box-shadow .5s, color .3s, background-color .5s;
-}
+    font-family: 'Raleway', sans-serif;
 
-.bouton-form:hover {
-    box-shadow: none;
-    color: var(--blanc);
-    background-color: var(--bleu);
+    &:hover {
+        box-shadow: none;
+        color: var(--blanc);
+        background-color: var(--bleu);
+    }
 }
 
 // .input-image{

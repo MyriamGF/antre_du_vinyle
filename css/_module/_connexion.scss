@@ -45,8 +45,11 @@ ________________________________________________________*/
                 border: none;
                 border-bottom: 1.5px solid var(--bleu);
                 width: 350px;
+                font-family: 'Raleway', sans-serif;
+                font-size: 1rem;
 
                 &::placeholder {
+                    font-size: .7rem;
                     text-transform: uppercase;
                     color: var(--gris-moyen);
                 }
