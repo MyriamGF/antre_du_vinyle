@@ -4,37 +4,112 @@
 //                _navPrincipale.scss                 //
 //----------------------------------------------------//
 
-
-.bouton-remonter{
-    display: none; 
+/*////[Code SCSS nav principale user]
+________________________________________________________*/
+.bouton-remonter {
+    display: none;
     position: fixed;
     top: 100px;
     right: 100px;
 }
 
-// font-family: 'Playfair Display', serif;
-// font-family: 'Raleway', sans-serif;
+/*////[Code SCSS nav principale admin]
+________________________________________________________*/
 
-// .input-image{
-//     position: relative;
-// }
+.nav-admin {
+    &>.fixed {
+        margin-top: 2rem;
+        position: fixed;
 
-// .fake-input-image{
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-// }
+        &>a {
+            &>img {
+                opacity: 1;
+                transition: opacity .5s;
+            }
 
-// input.cherche-image{
-//     z-index: 1;
-//     width: 300px;
-//     padding: 1em;
-//     opacity: 0;
-//     position: relative;
-// }
+            &:hover {
+                &>img {
+                    opacity: 60%;
 
-// .fake-input-image .bouton-form{
-//     width: 300px;
-//     padding: 1em;
-//     background-color: green;
-// }
+                }
+            }
+        }
+
+        &>.onglets {
+            margin-top: 2rem;
+            @include flex-column;
+
+            &>h2 {
+                align-self: center;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #000;
+                line-height: 0.1em;
+                margin: 10px 0 20px;
+                font-family: 'Playfair Display', serif;
+                text-transform: uppercase;
+
+                &>span {
+                    background: #fff;
+                    padding: 0 10px;
+                }
+            }
+
+            &>a {
+                @include flex-row;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 1rem;
+                padding: 1em;
+                border: 1px solid var(--blanc);
+                transition: border .5s;
+
+                &>.icone {
+                    min-width: 70px;
+                    font-size: 2.5rem;
+                    color: var(--gris);
+                    fill: var(--gris);
+
+                    &>svg {
+                        width: 60px;
+                    }
+                }
+
+                &>.onglet {
+                    color: var(--gris);
+                    text-align: left;
+                    width: 100%;
+                    font-weight: 600;
+                }
+
+                &:first-of-type {
+                    &>.icone {
+                        padding-left: .25em;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    &>.icone {
+                        &>svg {
+                            width: 50px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    border: 1px solid var(--noir);
+                }
+
+                &.selected {
+                    border: 1px solid var(--bleu);
+
+                    &>.icone,
+                    &>.onglet {
+                        color: var(--bleu);
+                        fill: var(--bleu);
+                    }
+                }
+            }
+        }
+    }
+}

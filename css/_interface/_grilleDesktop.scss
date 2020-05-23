@@ -10,14 +10,16 @@ ________________________________________________________*/
 .interface-admin {
     display: grid;
     grid-template-areas:
-        'nav page page page page page page';
-    grid-template-columns: 300px 1fr;
+        'nav page';
+    grid-template-columns: 380px 1fr;
 
     &>.nav-admin {
         grid-area: nav;
         background-color: var(--blanc);
         height: 100%;
-        padding: 3em;
+        padding: 2em;
+        @include flex-column;
+        align-items: center;
     }
 
     &>.page-admin {

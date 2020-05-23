@@ -21,8 +21,9 @@ ________________________________________________________*/
 
     &>h1 {
         font-weight: 500;
-        font-size: 2rem;
+        font-size: 1.7rem;
         margin: 2rem 0;
+        font-family: 'Playfair Display', serif;
     }
 
     &>form {
@@ -48,18 +49,17 @@ ________________________________________________________*/
                 &::placeholder {
                     text-transform: uppercase;
                     color: var(--gris-moyen);
-
                 }
             }
         }
 
         &>a {
-            color: var(--rouge);
+            color: var(--noir);
             margin-top: 2rem;
-            transition: color .5s;
+            transition: color .2s;
 
             &:hover {
-                color: var(--noir);
+                color: var(--rouge);
             }
         }
     }

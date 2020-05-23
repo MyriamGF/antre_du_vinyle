@@ -201,9 +201,9 @@ ________________________________________________________*/
 .interface-admin {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'nav page page page page page page';
-  -ms-grid-columns: 300px 1fr;
-      grid-template-columns: 300px 1fr;
+      grid-template-areas: 'nav page';
+  -ms-grid-columns: 380px 1fr;
+      grid-template-columns: 380px 1fr;
 }
 
 .interface-admin > .nav-admin {
@@ -212,19 +212,30 @@ ________________________________________________________*/
   grid-area: nav;
   background-color: var(--blanc);
   height: 100%;
-  padding: 3em;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .interface-admin > .page-admin {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 6;
   grid-area: page;
   background-color: var(--gris-pale);
   height: 100vh;
 }
 
 /*////[Code SCSS structure GRID des pages user]
+________________________________________________________*/
+/*////[Code SCSS nav principale user]
 ________________________________________________________*/
 .bouton-remonter {
   display: none;
@@ -233,6 +244,113 @@ ________________________________________________________*/
   right: 100px;
 }
 
+/*////[Code SCSS nav principale admin]
+________________________________________________________*/
+.nav-admin > .fixed {
+  margin-top: 2rem;
+  position: fixed;
+}
+
+.nav-admin > .fixed > a > img {
+  opacity: 1;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.nav-admin > .fixed > a:hover > img {
+  opacity: 60%;
+}
+
+.nav-admin > .fixed > .onglets {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav-admin > .fixed > .onglets > h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+}
+
+.nav-admin > .fixed > .onglets > h2 > span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+.nav-admin > .fixed > .onglets > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1em;
+  border: 1px solid var(--blanc);
+  -webkit-transition: border .5s;
+  transition: border .5s;
+}
+
+.nav-admin > .fixed > .onglets > a > .icone {
+  min-width: 70px;
+  font-size: 2.5rem;
+  color: var(--gris);
+  fill: var(--gris);
+}
+
+.nav-admin > .fixed > .onglets > a > .icone > svg {
+  width: 60px;
+}
+
+.nav-admin > .fixed > .onglets > a > .onglet {
+  color: var(--gris);
+  text-align: left;
+  width: 100%;
+  font-weight: 600;
+}
+
+.nav-admin > .fixed > .onglets > a:first-of-type > .icone {
+  padding-left: .25em;
+}
+
+.nav-admin > .fixed > .onglets > a:nth-of-type(2) > .icone > svg {
+  width: 50px;
+}
+
+.nav-admin > .fixed > .onglets > a:hover {
+  border: 1px solid var(--noir);
+}
+
+.nav-admin > .fixed > .onglets > a.selected {
+  border: 1px solid var(--bleu);
+}
+
+.nav-admin > .fixed > .onglets > a.selected > .icone,
+.nav-admin > .fixed > .onglets > a.selected > .onglet {
+  color: var(--bleu);
+  fill: var(--bleu);
+}
+
+/*////[Code SCSS du layout des pages de gestion du site]
+________________________________________________________*/
 /*////[Code SCSS connexion admin]
 ________________________________________________________*/
 .connexion-admin {
@@ -260,8 +378,9 @@ ________________________________________________________*/
 
 .connexion-admin > h1 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 2rem 0;
+  font-family: 'Playfair Display', serif;
 }
 
 .connexion-admin > form {
@@ -318,16 +437,20 @@ ________________________________________________________*/
 }
 
 .connexion-admin > form > a {
-  color: var(--rouge);
+  color: var(--noir);
   margin-top: 2rem;
-  -webkit-transition: color .5s;
-  transition: color .5s;
+  -webkit-transition: color .2s;
+  transition: color .2s;
 }
 
 .connexion-admin > form > a:hover {
-  color: var(--noir);
+  color: var(--rouge);
 }
 
+/*////[Code SCSS carrousel page accueil]
+________________________________________________________*/
+/*////[Code SCSS carrousel page de détails]
+________________________________________________________*/
 .carrousel-vignettes .slick-slide {
   opacity: 0.5;
 }
@@ -336,6 +459,8 @@ ________________________________________________________*/
   opacity: 1;
 }
 
+/*////[Code SCSS formulaire général]
+________________________________________________________*/
 form {
   display: -webkit-box;
   display: -ms-flexbox;
