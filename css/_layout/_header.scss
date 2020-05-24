@@ -3,3 +3,27 @@
 //                   // HEADER //                     //
 //                   _header.scss                     //
 //----------------------------------------------------//
+
+/*////[Code SCSS header]
+________________________________________________________*/
+
+.header-accueil {
+    position: relative;
+    background: url(../../images/header/header-accueil-1024.jpg) center;
+    background-size: cover;
+    height: 600px;
+    padding: 0 15vw;
+
+    &>h1 {
+        position: absolute;
+        bottom: 100px;
+        font-size: 1.8rem;
+        color: var(--jaune);
+
+        & span {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+    }
+}
