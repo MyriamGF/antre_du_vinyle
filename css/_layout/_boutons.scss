@@ -8,6 +8,7 @@
 ________________________________________________________*/
 
 .bouton {
+    cursor: pointer;
     width: 200px;
     padding: 1em;
     background-color: var(--blanc);
@@ -33,6 +34,7 @@ ________________________________________________________*/
     text-align: center;
     width: 200px;
     padding: 1em;
+    font-size: .8rem;
     background-color: var(--blanc);
     border: none;
     border-radius: 60px;
@@ -47,5 +49,31 @@ ________________________________________________________*/
         box-shadow: none;
         color: var(--blanc);
         background-color: var(--bleu);
+    }
+}
+
+.bouton-form-rouge {
+    @extend .bouton-form;
+    z-index: 2;
+    color: var(--blanc);
+    background-color: var(--rouge);
+    margin-bottom: .8rem;
+
+    &:hover {
+        color: var(--blanc);
+        background-color: rgb(106, 214, 139);
+    }
+}
+
+.bouton-annuler {
+    cursor: pointer;
+    z-index: 1;
+    color: var(--gris-moyen) !important;
+    background-color: var(--blanc);
+    box-shadow: none;
+
+    &:hover {
+        color: var(--rouge) !important;
+        background-color: var(--blanc);
     }
 }

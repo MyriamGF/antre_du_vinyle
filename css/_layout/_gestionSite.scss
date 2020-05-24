@@ -129,6 +129,7 @@ ________________________________________________________*/
                         text-align: center;
                      
                         &>a{
+                            cursor: pointer;
                             flex-basis: 10%;
                             font-size: 2rem;
                             color: var(--bleu);
@@ -206,30 +207,6 @@ ________________________________________________________*/
                             z-index: 1;
                         }
                     }
-                }
-            }
-
-            &>.bouton-form:first-of-type {
-                z-index: 2;
-                color: var(--blanc);
-                background-color: var(--rouge);
-                margin-bottom: .8rem;
-
-                &:hover {
-                    color: var(--blanc);
-                    background-color: rgb(106, 214, 139);
-                }
-            }
-
-            &>.bouton {
-                z-index: 1;
-                color: var(--gris-moyen) !important;
-                background-color: var(--blanc);
-                box-shadow: none;
-
-                &:hover {
-                    color: var(--rouge) !important;
-                    background-color: var(--blanc);
                 }
             }
         }
