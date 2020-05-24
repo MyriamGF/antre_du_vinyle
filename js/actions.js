@@ -2,13 +2,13 @@
 
 btRemonter = document.getElementById("bouton-remonter");
 
-// Quand l'utilisateur défile la page de 20px, le bouton apparaît
+// Quand l'utilisateur défile la page de 160px, le bouton apparaît
 window.onscroll = function () {
   scrollFonction()
 };
 
 function scrollFonction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 160 || document.documentElement.scrollTop > 160) {
     btRemonter.style.display = "block";
   } else {
     btRemonter.style.display = "none";

@@ -77,3 +77,36 @@ ________________________________________________________*/
         background-color: var(--blanc);
     }
 }
+
+.bouton-remonter {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 3rem;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/*////[Code SCSS barre de défilement]
+________________________________________________________*/
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gris);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bleu);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gris-moyen);
+}

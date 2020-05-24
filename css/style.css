@@ -164,6 +164,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -236,13 +237,180 @@ ________________________________________________________*/
 
 /*////[Code SCSS structure GRID des pages user]
 ________________________________________________________*/
+/*////[Code SCSS haut de page (nav langue)]
+________________________________________________________*/
+.haut-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--blanc);
+  padding: 1em 3em 2em 3em;
+}
+
+.haut-page > .nav-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: auto;
+  color: var(--bleu);
+}
+
+.haut-page > .nav-user > * {
+  margin-left: 1em;
+}
+
+.haut-page > .nav-user > p > a {
+  font-size: .9rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.haut-page > .nav-user > p > a > span {
+  font-weight: 800;
+}
+
+.haut-page > .nav-user > p > a:hover {
+  color: var(--gris);
+}
+
+.haut-page > .nav-user > a {
+  font-size: 1.2rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.haut-page > .nav-user > a:hover {
+  color: var(--gris);
+}
+
+.haut-page > .logo-haut {
+  margin: 0 auto;
+}
+
+.haut-page > .logo-haut img {
+  width: 250px;
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
+}
+
+.haut-page > .logo-haut img:hover {
+  -webkit-filter: hue-rotate(360deg);
+          filter: hue-rotate(360deg);
+}
+
 /*////[Code SCSS nav principale user]
 ________________________________________________________*/
-.bouton-remonter {
-  display: none;
-  position: fixed;
-  top: 100px;
-  right: 100px;
+.nav-principale {
+  border: 1px solid var(--gris-pale);
+  text-align: center;
+  z-index: 1000;
+  background-color: var(--blanc);
+}
+
+.nav-principale > .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-principale > .menu .onglet {
+  cursor: pointer;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: .9rem;
+  padding: 1em;
+  border-bottom: 4px solid var(--blanc);
+  -webkit-transition: border .2s;
+  transition: border .2s;
+}
+
+.nav-principale > .menu .onglet:hover {
+  border-bottom: 4px solid var(--rouge);
+}
+
+.nav-principale > .menu > .onglet-groupe {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-principale > .menu > .onglet-groupe > li:hover + .sous-menu,
+.nav-principale > .menu > .onglet-groupe > .sous-menu:hover {
+  visibility: visible;
+  opacity: 1;
+  border-bottom: 4px solid var(--rouge);
+}
+
+.nav-principale > .menu > .onglet-groupe > .sous-menu {
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 250px;
+  position: absolute;
+  top: 47px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--blanc);
+  border: 1px solid var(--gris-pale);
+  -webkit-transition: visibility .2s, opacity .2s;
+  transition: visibility .2s, opacity .2s;
+}
+
+.nav-principale > .menu > .onglet-groupe > .sous-menu a {
+  padding: 1em;
+  width: 100%;
+  border-bottom: 1px solid var(--gris-pale);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 /*////[Code SCSS nav principale admin]
@@ -724,6 +892,37 @@ ________________________________________________________*/
 .bouton-annuler:hover, .pop-up > article > div > .actions-pop-up > a:hover:first-of-type {
   color: var(--rouge) !important;
   background-color: var(--blanc);
+}
+
+.bouton-remonter {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 3rem;
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*////[Code SCSS barre de défilement]
+________________________________________________________*/
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gris);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bleu);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gris-moyen);
 }
 
 /*////[Code SCSS connexion admin]

@@ -6,11 +6,76 @@
 
 /*////[Code SCSS nav principale user]
 ________________________________________________________*/
-.bouton-remonter {
-    display: none;
-    position: fixed;
-    top: 100px;
-    right: 100px;
+
+.nav-principale {
+    border: 1px solid var(--gris-pale);
+    text-align: center;
+    z-index: 1000;
+    background-color: var(--blanc);
+    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    &>.menu {
+        @include flex-row;
+        align-items: center;
+        justify-content: center;
+
+        & .onglet {
+            cursor: pointer;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: .9rem;
+            padding: 1em;
+            border-bottom: 4px solid var(--blanc);
+            transition: border .2s;
+
+            &:hover {
+                border-bottom: 4px solid var(--rouge);
+            }
+        }
+
+        &>.onglet-groupe {
+            position: relative;
+            @include flex-column;
+            justify-content: center;
+            align-items: center;
+
+            &>li:hover+.sous-menu,
+            &>.sous-menu:hover {
+                visibility: visible;
+                opacity: 1;
+                border-bottom: 4px solid var(--rouge);
+            }
+
+            &>.sous-menu {
+                visibility: hidden;
+                opacity: 0;
+                z-index: 999;
+                @include flex-column;
+                width: 250px;
+                position: absolute;
+                top: 47px;
+                align-items: center;
+                background-color: var(--blanc);
+                border: 1px solid var(--gris-pale);
+                transition: visibility .2s, opacity .2s;
+
+                & a {
+                    padding: 1em;
+                    width: 100%;
+                    border-bottom: 1px solid var(--gris-pale);
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-size: .9rem;
+
+                }
+            }
+        }
+    }
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
 }
 
 /*////[Code SCSS nav principale admin]
@@ -33,7 +98,8 @@ ________________________________________________________*/
 
                 }
             }
-            color: var(--gris-moyen);  
+
+            color: var(--gris-moyen);
         }
 
         &>.onglets {
@@ -97,7 +163,7 @@ ________________________________________________________*/
                     }
                 }
 
-                &:last-of-type{
+                &:last-of-type {
                     border-bottom: 1px solid var(--noir);
                 }
 

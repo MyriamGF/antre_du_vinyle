@@ -3,3 +3,59 @@
 //                  // NAV LANGUE //                  //
 //                  _navLangue.scss                   //
 //----------------------------------------------------//
+
+/*////[Code SCSS haut de page (nav langue)]
+________________________________________________________*/
+
+.haut-page {
+    @include flex-column;
+    justify-content: center;
+    background-color: var(--blanc);
+    padding: 1em 3em 2em 3em;
+
+    &>.nav-user {
+        @include flex-row;
+        margin-left: auto;
+        color: var(--bleu);
+
+        &>* {
+            margin-left: 1em;
+        }
+
+        &>p>a {
+            font-size: .9rem;
+
+            &>span {
+                font-weight: 800;
+            }
+
+            transition: color .3s;
+
+            &:hover {
+                color: var(--gris);
+            }
+        }
+
+        &>a {
+            font-size: 1.2rem;
+            transition: color .3s;
+
+            &:hover {
+                color: var(--gris);
+            }
+        }
+
+    }
+
+    &>.logo-haut {
+        margin: 0 auto;
+
+        & img {
+            width: 250px;
+            transition: filter 1s;
+            &:hover{
+                filter: hue-rotate(360deg);
+            }
+        }
+    }
+}

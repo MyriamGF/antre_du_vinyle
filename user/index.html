@@ -25,7 +25,7 @@
     <div class="interface-user">
         <section class="haut-page">
             <nav class="nav-user">
-                <p><a href=""><span>FR</span></a> | <a href="">EN</a></p>
+                <p><a href="">FR</a> | <a href=""><span>EN</span></a></p>
                 <a href="" class="user-icon"><i class="fas fa-user"></i></a>
                 <a href="" class="panier-icon"><i class="fas fa-shopping-cart"></i></a>
             </nav>
@@ -35,37 +35,42 @@
             </div>
         </section>
 
-        <nav class="nav-principale">
+        <nav class="nav-principale sticky">
             <ul class="menu">
                 <a href="index.html">
-                    <li>Accueil</li>
+                    <li class="onglet">Accueil</li>
                 </a>
                 <a href="#nos-vinyles">
-                    <li>Nos vinyles</li>
+                    <li class="onglet">Nos vinyles</li>
                 </a>
 
-                <li>Commander</li>
+                <div class="onglet-groupe">
+                    <li class="onglet">Commander</li>
+                    <ul class="sous-menu">
+                        <a href="#commander">
+                            <li>Comment commander</li>
+                        </a>
+                        <a href="#livraison">
+                            <li>Livraison</li>
+                        </a>
+                    </ul>
+                </div>
 
-                <ul class="sous-menu">
-                    <a href="#commander">
-                        <li>Comment commander</li>
-                    </a>
-                    <a href="#livraison">
-                        <li>Livraison</li>
-                    </a>
-                </ul>
                 <a href="#promotion">
-                    <li>Promotions</li>
+                    <li class="onglet">Promotions</li>
                 </a>
-                <li>À propos</li>
-                <ul class="sous-menu">
-                    <a href="#heures">
-                        <li>Heures d'ouverture</li>
-                    </a>
-                    <a href="#entreprise">
-                        <li>L'entreprise</li>
-                    </a>
-                </ul>
+                <div class="onglet-groupe">
+                    <li class="onglet">À propos</li>
+                    <ul class="sous-menu">
+                        <a href="#heures">
+                            <li>Heures d'ouverture</li>
+                        </a>
+                        <a href="#entreprise">
+                            <li>L'entreprise</li>
+                        </a>
+                    </ul>
+                </div>
+
             </ul>
             <button class="bouton-remonter" onclick="hautPage()" id="bouton-remonter" title="Haut de la page"><i
                     class="fas fa-chevron-circle-up"></i></button>
