@@ -3,7 +3,9 @@
 btRemonter = document.getElementById("bouton-remonter");
 
 // Quand l'utilisateur défile la page de 20px, le bouton apparaît
-window.onscroll = function() {scrollFonction()};
+window.onscroll = function () {
+  scrollFonction()
+};
 
 function scrollFonction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -22,28 +24,22 @@ function hautPage() {
 
 // ----- ADMIN POP-UP SUPPRIMER ----- //
 
-// Get the popUp
-var popUp = document.getElementById("mypopUp");
+// Le pop-up
+var popUp = document.getElementById("pop-up-delete");
 
-// Get the button that opens the popUp
-var btn = document.getElementById("myBtn");
+// Les boutons pour fermer le pop-up
+var fermerX = document.getElementsByClassName("fermer-pop-up")[0];
+var fermerAnnuler = document.getElementsByClassName("fermer-pop-up")[1];
 
-// Get the <span> element that closes the popUp
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the popUp 
-btn.onclick = function() {
+// Ouvrir le pop-up
+function ouvrirPU() {
   popUp.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the popUp
-span.onclick = function() {
+// Fermer le pop-up
+fermerX.onclick = function () {
   popUp.style.display = "none";
 }
-
-// When the user clicks anywhere outside of the popUp, close it
-window.onclick = function(event) {
-  if (event.target == popUp) {
-    popUp.style.display = "none";
-  }
+fermerAnnuler.onclick = function () {
+  popUp.style.display = "none";
 }

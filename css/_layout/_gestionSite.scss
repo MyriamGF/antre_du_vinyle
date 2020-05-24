@@ -112,9 +112,11 @@ ________________________________________________________*/
 
                     &>.infos {
                         width: 60%;
-                        &>li{
+
+                        &>li {
                             margin: .7rem 0;
-                            &>span{
+
+                            &>span {
                                 font-weight: 500;
                             }
                         }
@@ -127,28 +129,29 @@ ________________________________________________________*/
                         padding-left: 2rem;
                         width: 40%;
                         text-align: center;
-                     
-                        &>a{
+
+                        &>a {
                             cursor: pointer;
                             flex-basis: 10%;
                             font-size: 2rem;
                             color: var(--bleu);
                             margin: 0 1rem;
                             transition: color .3s;
-                            &:hover{
+
+                            &:hover {
                                 color: var(--gris);
                             }
                         }
 
-                        &>p{
+                        &>p {
                             flex-basis: 100%;
                             font-size: 1.6rem;
-                            &>span{
+
+                            &>span {
                                 font-weight: 500;
                             }
                         }
                     }
-
                 }
             }
         }

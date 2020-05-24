@@ -7,6 +7,10 @@
 /*////[Code SCSS pop-up de confirmation effacer article admin]
 ________________________________________________________*/
 
+#pop-up-delete {
+    display: none;
+}
+
 .pop-up {
     position: absolute;
     top: 15vh;
@@ -51,7 +55,7 @@ ________________________________________________________*/
             margin-left: 1rem;
             align-items: center;
             justify-content: center;
-            
+
 
             &>p {
                 margin: 1rem 0 3rem 0;
@@ -63,13 +67,15 @@ ________________________________________________________*/
             }
 
             &>.actions-pop-up {
-                &>*{
+                &>* {
                     margin: 0 .7rem;
                 }
-                &>a:first-of-type{
+
+                &>a:first-of-type {
                     @extend .bouton-annuler;
                 }
-                &>a:last-of-type{
+
+                &>a:last-of-type {
                     @extend .bouton-form-rouge;
                 }
             }

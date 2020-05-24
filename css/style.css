@@ -800,6 +800,10 @@ ________________________________________________________*/
 
 /*////[Code SCSS pop-up de confirmation effacer article admin]
 ________________________________________________________*/
+#pop-up-delete {
+  display: none;
+}
+
 .pop-up {
   position: absolute;
   top: 15vh;
