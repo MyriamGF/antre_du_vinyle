@@ -394,6 +394,13 @@ ________________________________________________________*/
   padding: 0 10px;
 }
 
+.page-admin h4 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding-bottom: .5em;
+  border-bottom: 1px solid var(--gris-pale);
+}
+
 .page-admin > .contenu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -503,15 +510,6 @@ ________________________________________________________*/
 }
 
 .page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin {
-  margin-left: 1rem;
-  width: 100%;
-}
-
-.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > h4 {
-  font-weight: 500;
-}
-
-.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .infos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,8 +517,62 @@ ________________________________________________________*/
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .infos {
+  width: 60%;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .infos > li {
+  margin: .7rem 0;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .infos > li > span {
+  font-weight: 500;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .actions-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-left: 2rem;
+  width: 40%;
+  text-align: center;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .actions-article > a {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  font-size: 2rem;
+  color: var(--bleu);
+  margin: 0 1rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .actions-article > a:hover {
+  color: var(--gris);
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .actions-article > p {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 1.6rem;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .actions-article > p > span {
+  font-weight: 500;
 }
 
 .page-admin > .contenu > form {
@@ -744,6 +796,83 @@ ________________________________________________________*/
 
 /*////[Code SCSS pop-up de confirmation effacer article admin]
 ________________________________________________________*/
+.pop-up-delete {
+  position: absolute;
+  top: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--blanc);
+  padding: 2em;
+  width: 40vw;
+  border: 1px solid var(--noir);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pop-up-delete > .annuler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+}
+
+.pop-up-delete > h3 {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.pop-up-delete > article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pop-up-delete > article > img {
+  width: 230px;
+}
+
+.pop-up-delete > article > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.pop-up-delete > article > div > p {
+  margin: 1rem 0 3rem 0;
+  font-size: 1.2rem;
+}
+
+.pop-up-delete > article > div > p > span {
+  font-weight: 500;
+}
+
 /*////[Code SCSS formulaire général]
 ________________________________________________________*/
 form {

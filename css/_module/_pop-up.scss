@@ -7,6 +7,54 @@
 /*////[Code SCSS pop-up de confirmation effacer article admin]
 ________________________________________________________*/
 
-.pop-up-delete{
+.pop-up-delete {
+    position: absolute;
+    top: 15vh;
+    @include flex-column;
+    align-items: center;
+    background-color: var(--blanc);
+    padding: 2em;
+    width: 40vw;
+    border: 1px solid var(--noir);
+    box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4);
 
+    &>.annuler {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1em;
+    }
+
+    &>h3 {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    &>article {
+        @include flex-row;
+        justify-content: center;
+
+        &>img {
+            width: 230px;
+        }
+
+        &>div {
+            @include flex-column;
+            margin-left: 1rem;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            &>p {
+                margin: 1rem 0 3rem 0;
+                font-size: 1.2rem;
+
+                &>span {
+                    font-weight: 500;
+                }
+            }
+
+            &>.actions-pop-up {}
+        }
+    }
 }
