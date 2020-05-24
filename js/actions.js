@@ -1,4 +1,4 @@
-// ----- BOUTON REMONTER LA PAGE ----- //
+// ----- USER - BOUTON REMONTER LA PAGE ----- //
 
 btRemonter = document.getElementById("bouton-remonter");
 
@@ -22,7 +22,7 @@ function hautPage() {
 }
 
 
-// ----- ADMIN POP-UP SUPPRIMER ----- //
+// ----- ADMIN - POP-UP SUPPRIMER ----- //
 
 // Le pop-up
 var popUp = document.getElementById("pop-up-delete");

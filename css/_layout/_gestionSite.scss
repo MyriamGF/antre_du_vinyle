@@ -165,6 +165,15 @@ ________________________________________________________*/
             &>.groupe-champ {
                 width: 70%;
 
+                & .liste-images {
+
+                    & img {
+                        z-index: 1000;
+                        width: 100px;
+                        padding: 1em;
+                    }
+                }
+
                 &>label {
                     font-weight: 500;
                 }

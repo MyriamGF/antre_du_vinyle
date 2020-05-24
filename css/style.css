@@ -589,6 +589,12 @@ ________________________________________________________*/
   width: 70%;
 }
 
+.page-admin > .contenu > form > .groupe-champ .liste-images img {
+  z-index: 1000;
+  width: 100px;
+  padding: 1em;
+}
+
 .page-admin > .contenu > form > .groupe-champ > label {
   font-weight: 500;
 }
