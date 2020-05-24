@@ -81,6 +81,42 @@ ________________________________________________________*/
             }
         }
 
+        &>.liste-articles-admin {
+            @include flex-column;
+            align-items: center;
+            background: var(--gris-pale);
+            padding: 0;
+
+            &>.article-admin {
+                @include flex-row;
+                background: var(--blanc);
+                padding: 1.5em;
+                margin-bottom: 1.5rem;
+                width: 100%;
+
+                &>img {
+                    width: 200px;
+                }
+
+                &>.article-infos-admin {
+                    margin-left: 1rem;
+                    width: 100%;
+                    &>h4 {
+                        font-weight: 500;
+                    }
+
+                    &>.infos {
+                        @include flex-row;
+                        flex-wrap: nowrap;
+
+                        &>ul {}
+
+                        &>.actions-article {}
+                    }
+                }
+            }
+        }
+
         &>form {
             padding: 2em;
             width: 50vw;

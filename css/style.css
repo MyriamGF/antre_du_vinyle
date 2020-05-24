@@ -469,6 +469,60 @@ ________________________________________________________*/
   margin-bottom: 1rem;
 }
 
+.page-admin > .contenu > .liste-articles-admin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--gris-pale);
+  padding: 0;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: var(--blanc);
+  padding: 1.5em;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > img {
+  width: 200px;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin {
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > h4 {
+  font-weight: 500;
+}
+
+.page-admin > .contenu > .liste-articles-admin > .article-admin > .article-infos-admin > .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 .page-admin > .contenu > form {
   padding: 2em;
   width: 50vw;
@@ -688,6 +742,8 @@ ________________________________________________________*/
   opacity: 1;
 }
 
+/*////[Code SCSS pop-up de confirmation effacer article admin]
+________________________________________________________*/
 /*////[Code SCSS formulaire général]
 ________________________________________________________*/
 form {
