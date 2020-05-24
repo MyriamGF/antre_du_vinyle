@@ -14,7 +14,7 @@ ________________________________________________________*/
   /*[Rouge]*/
   --rouge: hsl(7, 80%, 64%);
   /*[Jaune]*/
-  --jaune: hsl(57, 72%, 85%);
+  --jaune: hsl(51, 100%, 86%);
   /*[Bleu]*/
   --bleu: hsl(172, 23%, 68%);
 }
@@ -193,6 +193,21 @@ label, input, button {
   outline: none;
 }
 
+::-moz-selection {
+  background: var(--gris);
+  color: var(--blanc);
+}
+
+::selection {
+  background: var(--gris);
+  color: var(--blanc);
+}
+
+::-moz-selection {
+  background: var(--gris);
+  color: var(--blanc);
+}
+
 /*////[Mixins pour flex]
 ________________________________________________________*/
 /*[Display flex en colonne]*/
@@ -237,6 +252,40 @@ ________________________________________________________*/
 
 /*////[Code SCSS structure GRID des pages user]
 ________________________________________________________*/
+/*////[Code SCSS footer]
+________________________________________________________*/
+footer {
+  background: var(--gris);
+  color: var(--blanc);
+  padding: 2em 15vw;
+}
+
+footer > h2 {
+  text-align: center;
+  border-bottom: 1px solid var(--blanc);
+  line-height: 0.1em;
+}
+
+footer > .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer > .footer-container > .footer-contact img {
+  width: 100px;
+}
+
 /*////[Code SCSS header]
 ________________________________________________________*/
 .header-accueil {
@@ -258,6 +307,12 @@ ________________________________________________________*/
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 2.5rem;
+}
+
+.header-vinyles {
+  height: 360px;
+  background: url(../../images/header/header-vinyles-1024.jpg) top center;
+  background-size: cover;
 }
 
 /*////[Code SCSS haut de page (nav langue)]
@@ -359,6 +414,10 @@ ________________________________________________________*/
           justify-content: center;
 }
 
+.nav-principale > .menu li.actif, .nav-principale > .menu li.onglet:hover {
+  border-bottom: 4px solid var(--rouge);
+}
+
 .nav-principale > .menu .onglet {
   cursor: pointer;
   font-weight: 400;
@@ -368,10 +427,6 @@ ________________________________________________________*/
   border-bottom: 4px solid var(--blanc);
   -webkit-transition: border .2s;
   transition: border .2s;
-}
-
-.nav-principale > .menu .onglet:hover {
-  border-bottom: 4px solid var(--rouge);
 }
 
 .nav-principale > .menu > .onglet-groupe {
@@ -575,7 +630,7 @@ ________________________________________________________*/
       align-self: center;
   width: 50vw;
   text-align: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--noir);
   line-height: 0.1em;
   text-transform: uppercase;
 }

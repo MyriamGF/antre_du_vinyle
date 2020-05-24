@@ -186,3 +186,13 @@ body {
 label, input, button{
     outline: none;
 }
+
+::selection {
+    background: var(--gris); 
+    color: var(--blanc);
+}
+
+::-moz-selection {
+    background: var(--gris); 
+    color: var(--blanc);
+}

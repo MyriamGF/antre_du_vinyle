@@ -3,3 +3,35 @@
 //                   // FOOTER //                     //
 //                   _footer.scss                     //
 //----------------------------------------------------//
+
+/*////[Code SCSS footer]
+________________________________________________________*/
+
+footer {
+    background: var(--gris);
+    color: var(--blanc);
+    padding: 2em 15vw;
+
+    &>h2 {
+        text-align: center;
+        border-bottom: 1px solid var(--blanc);
+        line-height: 0.1em;
+    }
+
+    &>.footer-container {
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+
+        &>.footer-contact {
+            & img {
+                width: 100px;
+            }
+
+        }
+
+        &>.footer-questions {}
+    }
+
+    &>p {}
+}
