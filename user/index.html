@@ -8,7 +8,8 @@
     <!-- Icônes Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <!-- Polices -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- Bibliothèque jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -261,9 +262,16 @@
                         souhaitez rejoindre notre équipe? Remplissez le formulaire ci-dessous et nous nous ferons un
                         plaisir de vous répondre.</p>
                     <form action="">
-                        <input type="text" id="nom" name="nom" placeholder="Votre nom">
-                        <input type="text" id="courriel" name="courriel" placeholder="Votre adresse courriel">
-                        <textarea name="message" id="message" placeholder="Écrivez quelque chose ici..."></textarea>
+                        <div class="groupe-champ">
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                        </div>
+                        <div class="groupe-champ">
+                            <input type="text" id="courriel" name="courriel" placeholder="Votre adresse courriel">
+                        </div>
+                        <div class="groupe-champ">
+                            <textarea name="message" id="message" placeholder="Écrivez quelque chose ici..."
+                                maxlength="1000"></textarea>
+                        </div>
                         <input class="bouton-form" type="submit" value="Envoyer">
                     </form>
                 </div>

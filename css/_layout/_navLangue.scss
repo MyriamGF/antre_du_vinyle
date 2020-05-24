@@ -52,10 +52,6 @@ ________________________________________________________*/
 
         & img {
             width: 250px;
-            transition: filter 1s;
-            &:hover{
-                filter: hue-rotate(360deg);
-            }
         }
     }
 }

@@ -29,5 +29,20 @@ form {
                 color: var(--gris-moyen);
             }
         }
+
+        &>textarea {
+            padding: .5em;
+            border: none;
+            border-bottom: 1.5px solid var(--bleu);
+            font-family: 'Raleway', sans-serif;
+            font-size: 1rem;
+            resize: none;
+
+            &::placeholder {
+                font-size: .7rem;
+                text-transform: uppercase;
+                color: var(--gris-moyen);
+            }
+        }
     }
 }

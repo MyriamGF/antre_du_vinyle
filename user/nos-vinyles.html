@@ -234,9 +234,16 @@
                         souhaitez rejoindre notre équipe? Remplissez le formulaire ci-dessous et nous nous ferons un
                         plaisir de vous répondre.</p>
                     <form action="">
-                        <input type="text" id="nom" name="nom" placeholder="Votre nom">
-                        <input type="text" id="courriel" name="courriel" placeholder="Votre adresse courriel">
-                        <textarea name="message" id="message" placeholder="Écrivez quelque chose ici..."></textarea>
+                        <div class="groupe-champ">
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                        </div>
+                        <div class="groupe-champ">
+                            <input type="text" id="courriel" name="courriel" placeholder="Votre adresse courriel">
+                        </div>
+                        <div class="groupe-champ">
+                            <textarea name="message" id="message" placeholder="Écrivez quelque chose ici..."
+                                maxlength="1000"></textarea>
+                        </div>
                         <input class="bouton-form" type="submit" value="Envoyer">
                     </form>
                 </div>

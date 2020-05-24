@@ -257,13 +257,13 @@ ________________________________________________________*/
 footer {
   background: var(--gris);
   color: var(--blanc);
-  padding: 2em 15vw;
+  padding: 4rem 15vw 1rem 15vw;
 }
 
 footer > h2 {
   text-align: center;
   border-bottom: 1px solid var(--blanc);
-  line-height: 0.1em;
+  background-color: green;
 }
 
 footer > .footer-container {
@@ -282,8 +282,110 @@ footer > .footer-container {
           align-items: center;
 }
 
+footer > .footer-container > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+footer > .footer-container > .footer-contact {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 4rem;
+  text-align: center;
+  line-height: 2rem;
+  margin: 3rem;
+}
+
+footer > .footer-container > .footer-contact > p,
+footer > .footer-container > .footer-contact > a:first-of-type {
+  margin: 1rem 0;
+}
+
+footer > .footer-container > .footer-contact > p {
+  font-weight: 500;
+}
+
+footer > .footer-container > .footer-contact > .reseaux-sociaux {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer > .footer-container > .footer-contact > .reseaux-sociaux > a {
+  font-size: 2rem;
+  margin: 2rem 1rem 0 1rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+footer > .footer-container > .footer-contact > .reseaux-sociaux > a:hover {
+  color: var(--bleu);
+}
+
 footer > .footer-container > .footer-contact img {
-  width: 100px;
+  width: 120px;
+}
+
+footer > .footer-container > .footer-questions {
+  margin: 2.3rem 0;
+}
+
+footer > .footer-container > .footer-questions > h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+footer > .footer-container > .footer-questions > p {
+  font-size: .9rem;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+footer > .footer-container > .footer-questions > form {
+  margin-top: .5rem;
+}
+
+footer > .footer-container > .footer-questions > form > .groupe-champ {
+  width: 100%;
+}
+
+footer > .footer-container > .footer-questions > form > .groupe-champ > textarea,
+footer > .footer-container > .footer-questions > form > .groupe-champ > input {
+  width: 100%;
+  color: var(--blanc);
+  background-color: var(--gris);
+  margin-bottom: 1rem;
+}
+
+footer > .footer-container > .footer-questions > form > .groupe-champ > textarea {
+  height: 150px;
+}
+
+footer > .copyright {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: .8rem;
 }
 
 /*////[Code SCSS header]
@@ -378,15 +480,6 @@ ________________________________________________________*/
 
 .haut-page > .logo-haut img {
   width: 250px;
-  -webkit-transition: -webkit-filter 1s;
-  transition: -webkit-filter 1s;
-  transition: filter 1s;
-  transition: filter 1s, -webkit-filter 1s;
-}
-
-.haut-page > .logo-haut img:hover {
-  -webkit-filter: hue-rotate(360deg);
-          filter: hue-rotate(360deg);
 }
 
 /*////[Code SCSS nav principale user]
@@ -899,8 +992,8 @@ ________________________________________________________*/
   border: none;
   border-radius: 60px;
   text-transform: uppercase;
-  -webkit-box-shadow: 0 10px 20px var(--gris-moyen);
-          box-shadow: 0 10px 20px var(--gris-moyen);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   color: var(--bleu) !important;
   font-weight: 600;
   font-size: .8rem;
@@ -928,8 +1021,8 @@ ________________________________________________________*/
   border: none;
   border-radius: 60px;
   text-transform: uppercase;
-  -webkit-box-shadow: 0 10px 20px var(--gris-moyen);
-          box-shadow: 0 10px 20px var(--gris-moyen);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   color: var(--bleu);
   font-weight: 600;
   -webkit-transition: color .3s, background-color .5s, -webkit-box-shadow .5s;
@@ -974,6 +1067,7 @@ ________________________________________________________*/
 
 .bouton-remonter {
   display: none;
+  cursor: pointer;
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -983,6 +1077,20 @@ ________________________________________________________*/
   border: none;
   color: white;
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-normal,
+.logo-blanc {
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
+}
+
+.logo-normal:hover,
+.logo-blanc:hover {
+  -webkit-filter: hue-rotate(360deg);
+          filter: hue-rotate(360deg);
 }
 
 /*////[Code SCSS barre de défilement]
@@ -1233,6 +1341,39 @@ form > .groupe-champ > input::-ms-input-placeholder {
 }
 
 form > .groupe-champ > input::placeholder {
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: var(--gris-moyen);
+}
+
+form > .groupe-champ > textarea {
+  padding: .5em;
+  border: none;
+  border-bottom: 1.5px solid var(--bleu);
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  resize: none;
+}
+
+form > .groupe-champ > textarea::-webkit-input-placeholder {
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: var(--gris-moyen);
+}
+
+form > .groupe-champ > textarea:-ms-input-placeholder {
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: var(--gris-moyen);
+}
+
+form > .groupe-champ > textarea::-ms-input-placeholder {
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: var(--gris-moyen);
+}
+
+form > .groupe-champ > textarea::placeholder {
   font-size: .7rem;
   text-transform: uppercase;
   color: var(--gris-moyen);
