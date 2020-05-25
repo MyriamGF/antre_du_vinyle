@@ -47,8 +47,51 @@ ________________________________________________________*/
 
 }
 
+/*[Couche des suggestions]*/
 .suggestions {
     grid-area: suggestions;
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 15vw 7rem 15vw;
+
+    & a {
+        padding: 2em;
+        border: 1px solid var(--gris-pale);
+        background-color: var(--blanc);
+        transition: background-color .2s, box-shadow .2s;
+
+        &>.vinyle {
+            @include flex-column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            &>* {
+                margin-top: 1rem;
+            }
+
+            &>.vinyle-image {
+                width: 100%;
+            }
+
+            &>.vinyle-nom {
+                text-transform: uppercase;
+                font-style: italic;
+                font-weight: 600;
+            }
+
+            &>.vinyle-prix {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.7rem;
+            }
+        }
+
+        &:hover {
+            background-color: var(--gris-pale);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    }
 }
 
 /*[Couche « Nouvel arrivage »]*/

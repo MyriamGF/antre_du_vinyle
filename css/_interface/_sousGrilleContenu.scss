@@ -13,3 +13,11 @@ ________________________________________________________*/
         grid-template-columns: auto auto auto auto;
     }
 }
+
+/*////[Code SCSS structure GRID couche suggestions]
+________________________________________________________*/
+
+.suggestions-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
