@@ -774,6 +774,71 @@ ________________________________________________________*/
   font-weight: 100;
 }
 
+/*////[Code SCSS des détails de l'article]
+________________________________________________________*/
+.vinyle-details {
+  padding: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vinyle-details > h3 {
+  font-weight: 500;
+  font-size: 1.9rem;
+  width: 30%;
+  text-align: center;
+  line-height: 2.9rem;
+  margin-bottom: 3rem;
+}
+
+.vinyle-details > h3:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  padding-top: 20px;
+  border-bottom: 1px solid black;
+}
+
+.vinyle-details > .details-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vinyle-details > .details-container > * {
+  margin: 0 3rem;
+}
+
+.vinyle-details > .details-container > .details-carrousel {
+  width: 60%;
+}
+
+.vinyle-details > .details-container > .details-infos {
+  width: 40%;
+}
+
 /*////[Code SCSS pour les couches récurrentes de user]
 ________________________________________________________*/
 /*[Couche de l'intro de la section (« Nos vinyles »)]*/
@@ -866,6 +931,12 @@ ________________________________________________________*/
       -ms-flex-pack: center;
           justify-content: center;
   padding: 4rem 15vw 7rem 15vw;
+}
+
+.suggestions h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .suggestions a {
