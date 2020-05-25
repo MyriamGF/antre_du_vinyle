@@ -10,7 +10,7 @@
     <!-- Polices -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Bibliothèque jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')}}"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <title>Nos vinyles | L'Antre du Vinyle</title>
@@ -18,48 +18,39 @@
 
 <body>
     <div class="interface-user">
-        <section class="haut-page">
-            <nav class="nav-user">
-                <p><a href="">FR</a> | <a href=""><span>EN</span></a></p>
-                <a href="" class="user-icon"><i class="fas fa-user"></i></a>
-                <a href="" class="panier-icon"><i class="fas fa-shopping-cart"></i></a>
-            </nav>
-            <div class="logo-haut">
-                <a href="index.html"><img class="logo-normal" src="../images/svg/logo-normal.svg" alt="Logo L'Antre du Vinyle"></a>
-            </div>
-        </section>
+        @include('interfaceUser.hautPage')
 
         <nav class="nav-principale sticky">
             <ul class="menu">
-                <a href="index.html">
+                <a href="{{route('accueilUser')}}">
                     <li class="onglet">Accueil</li>
                 </a>
-                <a href="index.html#nos-vinyles">
+                <a href="{{route('accueilUser')}}#nos-vinyles">
                     <li class="onglet actif">Nos vinyles</li>
                 </a>
 
                 <div class="onglet-groupe">
                     <li class="onglet">Commander</li>
                     <ul class="sous-menu">
-                        <a href="index.html#commander">
+                        <a href="{{route('accueilUser')}}#commander">
                             <li>Comment commander</li>
                         </a>
-                        <a href="index.html#livraison">
+                        <a href="{{route('accueilUser')}}#livraison">
                             <li>Livraison</li>
                         </a>
                     </ul>
                 </div>
 
-                <a href="index.html#promotion">
+                <a href="{{route('accueilUser')}}#promotion">
                     <li class="onglet">Promotions</li>
                 </a>
                 <div class="onglet-groupe">
                     <li class="onglet">À propos</li>
                     <ul class="sous-menu">
-                        <a href="index.html#heures">
+                        <a href="{{route('accueilUser')}}#heures">
                             <li>Heures d'ouverture</li>
                         </a>
-                        <a href="index.html#entreprise">
+                        <a href="{{route('accueilUser')}}#entreprise">
                             <li>L'entreprise</li>
                         </a>
                     </ul>
@@ -81,88 +72,14 @@
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
             </div>
-            <img src="../images/couches/disques.png" alt="Disques en pile">
+            <img src="{{asset('../images/couches/disques.png')}}" alt="Disques en pile">
         </section>
 
         @include('interfaceUser.ariane')
 
-        <section class="liste-vinyles">
-            <div class="vinyles-container">
-                <a href="vinyle.html">
-                    <article class="vinyle">
-                        <img class="vinyle-image" src="../images/disques/game-dames-and-guitar-thangs/avant.jpg" alt="Couverture de l'album Game, Dames and
-                                Guitar Thangs">
-                        <p class="vinyle-nom">Game, Dames and
-                            Guitar Thangs - Eddie Hazel</p>
-                        <p class="vinyle-prix">$10.99</p>
-                    </article>
-                </a>
-                <a href="vinyle.html">
-                    <article class="vinyle">
-                        <img class="vinyle-image" src="../images/disques/game-dames-and-guitar-thangs/avant.jpg" alt="Couverture de l'album Game, Dames and
-                                    Guitar Thangs">
-                        <p class="vinyle-nom">Game, Dames and
-                            Guitar Thangs - Eddie Hazel</p>
-                        <p class="vinyle-prix">$10.99</p>
-                    </article>
-                </a>
-                <a href="vinyle.html">
-                    <article class="vinyle">
-                        <img class="vinyle-image" src="../images/disques/game-dames-and-guitar-thangs/avant.jpg" alt="Couverture de l'album Game, Dames and
-                                        Guitar Thangs">
-                        <p class="vinyle-nom">Game, Dames and
-                            Guitar Thangs - Eddie Hazel</p>
-                        <p class="vinyle-prix">$10.99</p>
-                    </article>
-                </a>
-                <a href="vinyle.html">
-                    <article class="vinyle">
-                        <img class="vinyle-image" src="../images/disques/game-dames-and-guitar-thangs/avant.jpg" alt="Couverture de l'album Game, Dames and
-                                            Guitar Thangs">
-                        <p class="vinyle-nom">Game, Dames and
-                            Guitar Thangs - Eddie Hazel</p>
-                        <p class="vinyle-prix">$10.99</p>
-                    </article>
-                </a>
-                <a href="vinyle.html">
-                    <article class="vinyle">
-                        <img class="vinyle-image" src="../images/disques/game-dames-and-guitar-thangs/avant.jpg" alt="Couverture de l'album Game, Dames and
-                                                Guitar Thangs">
-                        <p class="vinyle-nom">Game, Dames and
-                            Guitar Thangs - Eddie Hazel</p>
-                        <p class="vinyle-prix">$10.99</p>
-                    </article>
-                </a>
-                <a href="vinyle.html">
-                    <article class="vinyle">
-                        <img class="vinyle-image" src="../images/disques/game-dames-and-guitar-thangs/avant.jpg" alt="Couverture de l'album Game, Dames and
-                                                    Guitar Thangs">
-                        <p class="vinyle-nom">Game, Dames and
-                            Guitar Thangs - Eddie Hazel</p>
-                        <p class="vinyle-prix">$10.99</p>
-                    </article>
-                </a>
-                <a href="vinyle.html">
-                    <article class="vinyle">
-                        <img class="vinyle-image" src="../images/disques/game-dames-and-guitar-thangs/avant.jpg" alt="Couverture de l'album Game, Dames and
-                                                        Guitar Thangs">
-                        <p class="vinyle-nom">Game, Dames and
-                            Guitar Thangs - Eddie Hazel</p>
-                        <p class="vinyle-prix">$10.99</p>
-                    </article>
-                </a>
-                <a href="vinyle.html">
-                    <article class="vinyle">
-                        <img class="vinyle-image" src="../images/disques/game-dames-and-guitar-thangs/avant.jpg" alt="Couverture de l'album Game, Dames and
-                                                            Guitar Thangs">
-                        <p class="vinyle-nom">Game, Dames and
-                            Guitar Thangs - Eddie Hazel</p>
-                        <p class="vinyle-prix">$10.99</p>
-                    </article>
-                </a>
+        section('contenu')
 
-            </div>
-        </section>
+        @show
 
         @include('interfaceUser.commander')
 
@@ -171,7 +88,7 @@
     </div>
 
     <!-- ACTIONS JQUERY / JAVASCRIPT -->
-    <script src="../js/actions.js"></script>
+    <script src="{{asset('../js/actions.js')}}"></script>
 
 </body>
 

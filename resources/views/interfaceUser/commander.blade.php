@@ -38,9 +38,9 @@
             </form>
         </div>
         <div class="livraison-image">
-            <img class="livraison-image" alt="Boîte de livraison" src="../images/couches/boite-300.png" srcset="../images/couches/boite-300.png 300w,
-                        ../images/couches/boite-600.png 600w,
-                        ../images/couches/boite-900.png 900w" sizes="(max-width: 1024px) 150px, (max-width: 1200px) 300px, (max-width: 1800px) 400px, 500px">
+            <img class="livraison-image" alt="Boîte de livraison" src="{{asset('../images/couches/boite-300.png')}}" srcset="{{asset('../images/couches/boite-300.png')}} 300w,
+                        {{asset('../images/couches/boite-600.png')}} 600w,
+                        {{asset('../images/couches/boite-900.png')}} 900w" sizes="(max-width: 1024px) 150px, (max-width: 1200px) 300px, (max-width: 1800px) 400px, 500px">
         </div>
     </div>
 

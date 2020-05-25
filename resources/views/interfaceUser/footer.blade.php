@@ -2,15 +2,15 @@
     <h2 class="ligne"></h2>
     <div class="footer-container">
         <div class="footer-contact">
-            <a href="index.html"><img class="logo-blanc" src="../images/svg/logo-blanc.svg" alt="Logo L'Antre du Vinyle"></a>
+            <a href="{{route('accueilUser')}}"><img class="logo-blanc" src="{{asset('../images/svg/logo-blanc.svg')}}" alt="Logo L'Antre du Vinyle"></a>
             <p>382 Boulevard Adolphe-Chapleau, Bois-des-Filion, QC J6Z 1H3</p>
             <a href="mailto: lantreduvinyle@gmail.com"><i class="fas fa-envelope"></i>
                 lantreduvinyle@gmail.com</a>
             <a href="tel:123-456-7890"><i class="fas fa-phone-alt"></i> (450) 621-8565</a>
             <div class="reseaux-sociaux">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a style="cursor: pointer"><i class="fab fa-twitter"></i></a>
+                <a style="cursor: pointer"><i class="fab fa-instagram"></i></a>
+                <a style="cursor: pointer"><i class="fab fa-facebook-f"></i></a>
             </div>
         </div>
         <div class="footer-questions">

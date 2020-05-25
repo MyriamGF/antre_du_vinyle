@@ -24,15 +24,17 @@ Route::get('/installer', 'AppController@installer');
 // Routes User
 Route::get('/', function () {
     return view('interfaceUser.accueil');
-});
+})->name('accueilUser');
+
 Route::get('/accueil', function () {
     return view('interfaceUser.accueil');
-});
-Route::get('/vinyles', "VinyleController@index");
-Route::get('/vinyles/{vinyle}', "VinyleController@show");
+})->name('accueilUser');
+
+Route::get('/vinyles', "VinyleController@index")->name('vinylesUser');
+Route::get('/vinyles/{vinyle}', "VinyleController@show")->name('detailsUser');
 
 
 // Routes Admin
 Route::get('/admin', function () {
-    return view('interfaceUser.accueil');
+    return view('interfaceUser.accueil')->name('accueilAdmin');
 });
