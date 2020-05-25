@@ -58,7 +58,7 @@ ________________________________________________________*/
     @include flex-column;
     align-items: center;
     justify-content: center;
-    padding: 4rem 15vw;
+    padding: 4rem 15vw 7rem 15vw;
 
     &>.heures-titre {
         @include flex-column;
@@ -109,8 +109,54 @@ ________________________________________________________*/
 
 /*[Couche de la promotion]*/
 .promotion {
+    height: 1000px;
     grid-area: promotion;
-    
+    background: var(--gris-pale);
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    // padding: 5rem 15vw;
+
+    &>.promotion-container {
+        height: 100%;
+        width: 100%;
+        @include flex-column;
+        align-items: center;
+        background: url(../../images/couches/table-tour.png) bottom no-repeat;
+        background-size: contain;
+        text-align: center;
+        font-size: 1.7rem;
+
+        &>* {
+            margin-top: 2rem;
+        }
+
+        &>p {
+            margin-top: 7rem;
+            line-height: 2.5rem;
+
+            &>span:first-of-type {
+                color: var(--rouge);
+                font-family: 'Playfair Display', serif;
+                font-weight: bold;
+                font-size: 2.5rem;
+            }
+
+            &>span:last-of-type {
+                color: var(--rouge);
+                font-weight: 500;
+            }
+        }
+
+        &>.table-svg {
+            width: 400px;
+        }
+
+        &>a {
+            width: 170px;
+        }
+
+    }
 }
 
 /*[Couche « Comment commander »]*/
