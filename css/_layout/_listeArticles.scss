@@ -58,67 +58,70 @@ ________________________________________________________*/
 /*////[Code SCSS pour la liste d'articles admin]
 ________________________________________________________*/
 
-.liste-articles-admin {
-    @include flex-column;
-    align-items: center;
-    background: var(--gris-pale);
-    padding: 0;
+.contenu {
 
-    &>.article-admin {
-        @include flex-row;
-        background: var(--blanc);
-        padding: 1.5em;
-        margin-bottom: 1.5rem;
-        width: 100%;
+    &>section.liste-articles-admin {
+        @include flex-column;
+        align-items: center;
+        background: var(--gris-pale);
+        padding: 0;
 
-        &>img {
-            width: 200px;
-        }
-
-        &>.article-infos-admin {
+        &>.article-admin {
             @include flex-row;
-            margin-left: 1rem;
+            background: var(--blanc);
+            padding: 1.5em;
+            margin-bottom: 1.5rem;
             width: 100%;
 
-            &>.infos {
-                width: 60%;
-
-                &>li {
-                    margin: .7rem 0;
-
-                    &>span {
-                        font-weight: 500;
-                    }
-                }
+            &>img {
+                width: 200px;
             }
 
-            &>.actions-article {
+            &>.article-infos-admin {
                 @include flex-row;
-                flex-wrap: wrap;
-                justify-content: flex-end;
-                padding-left: 2rem;
-                width: 40%;
-                text-align: center;
+                margin-left: 1rem;
+                width: 100%;
 
-                &>a {
-                    cursor: pointer;
-                    flex-basis: 10%;
-                    font-size: 2rem;
-                    color: var(--bleu);
-                    margin: 0 1rem;
-                    transition: color .3s;
+                &>.infos {
+                    width: 60%;
 
-                    &:hover {
-                        color: var(--gris);
+                    &>li {
+                        margin: .7rem 0;
+
+                        &>span {
+                            font-weight: 500;
+                        }
                     }
                 }
 
-                &>p {
-                    flex-basis: 100%;
-                    font-size: 1.6rem;
+                &>.actions-article {
+                    @include flex-row;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                    padding-left: 2rem;
+                    width: 40%;
+                    text-align: center;
 
-                    &>span {
-                        font-weight: 500;
+                    &>a {
+                        cursor: pointer;
+                        flex-basis: 10%;
+                        font-size: 2rem;
+                        color: var(--bleu);
+                        margin: 0 1rem;
+                        transition: color .3s;
+
+                        &:hover {
+                            color: var(--gris);
+                        }
+                    }
+
+                    &>p {
+                        flex-basis: 100%;
+                        font-size: 1.6rem;
+
+                        &>span {
+                            font-weight: 500;
+                        }
                     }
                 }
             }

@@ -50,7 +50,7 @@ ________________________________________________________*/
             margin-bottom: 2rem;
         }
 
-        &>section {
+        &>.section-index-admin {
             @include flex-row;
             align-items: center;
             justify-items: baseline;

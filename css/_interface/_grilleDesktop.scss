@@ -35,20 +35,23 @@ ________________________________________________________*/
 ________________________________________________________*/
 
 .interface-user {
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
     display: grid;
     grid-template-areas:
-        'navHaut' 
-        'navPrincipale' 
-        'header' 
-        'intro' 
-        'ariane' 
-        'vinyle' 
-        'suggestions' 
-        'nouveaute' 
-        'heures' 
-        'promotion' 
-        'commander' 
-        'livraison' 
-        'entreprise' 
-        'footer'; 
+        'navHaut'
+        'navPrincipale'
+        'header'
+        'intro'
+        'ariane'
+        'vinyle'
+        'suggestions'
+        'nouveaute'
+        'heures'
+        'promotion'
+        'commander'
+        'livraison'
+        'entreprise'
+        'footer';
 }

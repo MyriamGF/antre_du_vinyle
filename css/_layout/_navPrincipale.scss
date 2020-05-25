@@ -20,10 +20,6 @@ ________________________________________________________*/
         align-items: center;
         justify-content: center;
 
-        & li.actif {
-            border-bottom: 4px solid var(--rouge);
-        }
-
         & .onglet {
             cursor: pointer;
             font-weight: 400;
@@ -33,8 +29,12 @@ ________________________________________________________*/
             border-bottom: 4px solid var(--blanc);
             transition: border .2s;
 
+            &.actif {
+                border-bottom: 4px solid var(--rouge);
+            }
+
             &:hover {
-                @extend .actif;
+                border-bottom: 4px solid var(--rouge);
             }
         }
 
@@ -48,7 +48,6 @@ ________________________________________________________*/
             &>.sous-menu:hover {
                 visibility: visible;
                 opacity: 1;
-                border-bottom: 4px solid var(--rouge);
             }
 
             &>.sous-menu {
@@ -71,7 +70,12 @@ ________________________________________________________*/
                     font-weight: 400;
                     text-transform: uppercase;
                     font-size: .9rem;
+                    transition: border .2s;
 
+                    &:hover {
+                        border-bottom: 4px solid var(--rouge);
+
+                    }
                 }
             }
         }
