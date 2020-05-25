@@ -276,8 +276,8 @@ ________________________________________________________*/
 .liste-vinyles > .vinyles-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
 }
 
 /*////[Code SCSS structure GRID couche suggestions]
@@ -300,6 +300,7 @@ ________________________________________________________*/
 
 .liste-vinyles > .vinyles-container {
   border: 1px solid var(--gris-pale);
+  width: 100%;
 }
 
 .liste-vinyles > .vinyles-container > a {
@@ -329,21 +330,19 @@ ________________________________________________________*/
   text-align: center;
 }
 
-.liste-vinyles > .vinyles-container > a > .vinyle > * {
-  margin-top: 1rem;
-}
-
 .liste-vinyles > .vinyles-container > a > .vinyle > .vinyle-image {
   width: 100%;
 }
 
 .liste-vinyles > .vinyles-container > a > .vinyle > .vinyle-nom {
+  margin-top: 1rem;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 600;
 }
 
 .liste-vinyles > .vinyles-container > a > .vinyle > .vinyle-prix {
+  margin-top: .5rem;
   font-family: 'Playfair Display', serif;
   font-size: 1.7rem;
 }

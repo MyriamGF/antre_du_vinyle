@@ -77,7 +77,7 @@
 
         @include('interfaceUser.ariane')
 
-        section('contenu')
+        @section('contenu')
 
         @show
 

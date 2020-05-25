@@ -14,11 +14,9 @@ class VinyleController extends Controller
      */
     public function index()
     {
-        // $vinyles = Vinyle::all();
-        // return view("vinyles.index", ['vinyles' => $vinyles]);
-        $vinyle = Vinyle::fake();
-
-        return view("vinyles.index", ['vinyle' => $vinyle]);
+        // $vinyles = Vinyle::fake();
+        $vinyles = Vinyle::all();
+        return view("vinyles.index", ['vinyles' => $vinyles]);
     }
 
     /**
@@ -48,9 +46,9 @@ class VinyleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Vinyle $vinyle)
     {
-        //
+        return view("vinyles.show", ['vinyle' => $vinyle]);
     }
 
     /**

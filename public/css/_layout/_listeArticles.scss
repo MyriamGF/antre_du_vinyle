@@ -13,6 +13,7 @@ ________________________________________________________*/
 
     &>.vinyles-container {
         border: 1px solid var(--gris-pale);
+        width: 100%;
 
         &>a {
             padding: 2em;
@@ -25,22 +26,20 @@ ________________________________________________________*/
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-
-                &>* {
-                    margin-top: 1rem;
-                }
-
+                
                 &>.vinyle-image {
                     width: 100%;
                 }
 
                 &>.vinyle-nom {
+                    margin-top: 1rem;
                     text-transform: uppercase;
                     font-style: italic;
                     font-weight: 600;
                 }
 
                 &>.vinyle-prix {
+                    margin-top: .5rem;
                     font-family: 'Playfair Display', serif;
                     font-size: 1.7rem;
                 }

@@ -3,7 +3,7 @@
         <section class="liste-vinyles">
         <div class="vinyles-container">
         @foreach($vinyles as $vinyle)
-            <a href="{{action('UserController@show', $vinyle)}}">
+            <a href="{{action('VinyleController@show', $vinyle)}}">
                 <article class="vinyle">
                     <img class="vinyle-image" src="{{asset('images/disques/'.$vinyle->dossierImg.'/avant.jpg')}}" alt="{{$vinyle->nomAlbum}}">
                     <p class="vinyle-nom">{{$vinyle->nomAlbum}}</p>

@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
 
-// Réinstaller base de données
+// Installer / update la base de données
 Route::get('/installer', 'AppController@installer');
 
 

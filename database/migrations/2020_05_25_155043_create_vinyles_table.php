@@ -15,7 +15,15 @@ class CreateVinylesTable extends Migration
     {
         Schema::create('vinyles', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nomAlbum');
+            $table->string('artiste');
+            $table->string('genre');
+            $table->string('sortie');
+            $table->decimal('prix', 3, 2);
+            $table->integer('dureeSec');
+            $table->integer('dureeMin');
+            $table->integer('quantite');
+            $table->string('dossierImg');
         });
     }
 
