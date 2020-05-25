@@ -101,10 +101,6 @@ ________________________________________________________*/
 }
 
 /*[Couche « Nouvel arrivage »]*/
-.vinyle-image {
-    width: 100px;
-}
-
 .nouveaute {
     grid-area: nouveaute;
     @include flex-column;
@@ -123,15 +119,16 @@ ________________________________________________________*/
     }
 
     &>.nouveaute-carrousel {
-        // box-shadow: 3px 3px 3px 3px 15px inset rgba(0, 0, 0, 0.2);
-        box-shadow: 0 5px 5px -2px inset rgba(0, 0, 0, 0.2),
-            0 -5px 5px -2px inset rgba(0, 0, 0, 0.2);
         position: relative;
         width: 100%;
         margin: auto 0;
         @include flex-row;
         align-items: center;
         text-align: center;
+
+        & *{
+            outline: none;
+        }
 
         &>a {
             color: var(--jaune);
@@ -147,6 +144,7 @@ ________________________________________________________*/
         }
 
         & .vinyle {
+            
             &>a {
                 margin: 1rem;
                 padding: 1em 2em;

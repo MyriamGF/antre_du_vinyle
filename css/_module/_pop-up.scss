@@ -12,15 +12,7 @@ ________________________________________________________*/
 }
 
 .pop-up {
-    position: absolute;
-    top: 15vh;
-    @include flex-column;
-    align-items: center;
-    background-color: var(--blanc);
-    width: 40vw;
-    border: 1px solid var(--noir);
-    box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4);
-    text-align: center;
+    @include pop-up;
 
     &>a {
         cursor: pointer;

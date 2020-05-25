@@ -216,6 +216,7 @@ ________________________________________________________*/
 ________________________________________________________*/
 /*[Mixin pour h2 span]*/
 /*[Mixin pour bouton mise en forme générale]*/
+/*[Mixin pour pop-up mise en forme générale]*/
 /*////[Code SCSS structure GRID des pages de l'admin]
 ________________________________________________________*/
 .interface-admin {
@@ -1029,10 +1030,6 @@ ________________________________________________________*/
 }
 
 /*[Couche « Nouvel arrivage »]*/
-.vinyle-image {
-  width: 100px;
-}
-
 .nouveaute {
   -ms-grid-row: 8;
   -ms-grid-column: 1;
@@ -1074,8 +1071,6 @@ ________________________________________________________*/
 }
 
 .nouveaute > .nouveaute-carrousel {
-  -webkit-box-shadow: 0 5px 5px -2px inset rgba(0, 0, 0, 0.2), 0 -5px 5px -2px inset rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 5px -2px inset rgba(0, 0, 0, 0.2), 0 -5px 5px -2px inset rgba(0, 0, 0, 0.2);
   position: relative;
   width: 100%;
   margin: auto 0;
@@ -1090,6 +1085,10 @@ ________________________________________________________*/
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+.nouveaute > .nouveaute-carrousel * {
+  outline: none;
 }
 
 .nouveaute > .nouveaute-carrousel > a {
@@ -2336,4 +2335,7 @@ ________________________________________________________*/
 .pop-up > article > div > .actions-pop-up > * {
   margin: 0 .7rem;
 }
+
+/*////[Keyframes et style pour chaque animation]
+________________________________________________________*/
 /*# sourceMappingURL=style.css.map */
