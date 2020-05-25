@@ -162,11 +162,103 @@ ________________________________________________________*/
 /*[Couche « Comment commander »]*/
 .commander {
     grid-area: commander;
+    background-color: var(--noir);
+    color: var(--blanc);
+    padding: 4rem 15vw 7rem 15vw;
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+
+    &>h2 {
+        @include titre-h2(var(--blanc));
+
+        &>span {
+            @include titre-span(var(--noir));
+        }
+    }
+
+    &>.commander-etapes {
+        margin-top: 2rem;
+        width: 60%;
+
+        &>ul {
+            @include flex-row;
+            align-items: flex-end;
+            margin: 2rem 0;
+
+            &>li {
+                line-height: 1.5rem;
+
+                &>span {
+                    color: var(--rouge);
+                    font-family: 'Playfair Display', serif;
+                    font-weight: 600;
+                    font-size: 5rem;
+                }
+
+                &:last-of-type {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
 }
 
 /*[Couche « Livraison »]*/
 .livraison {
     grid-area: livraison;
+    padding: 4rem 15vw 7rem 15vw;
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+
+    &>h2 {
+        @include titre-h2(var(--noir));
+
+        &>span {
+            @include titre-span(var(--blanc));
+        }
+    }
+
+    &>.livraison-container {
+        padding: 3rem 0;
+        @include flex-row;
+        align-items: center;
+        justify-content: center;
+
+        &>.livraison-texte {
+            width: 60%;
+            padding-right: 5rem;
+
+            &>p {
+                font-size: 1.1rem;
+                line-height: 1.9rem;
+                margin-bottom: 2rem;
+            }
+
+            &>form {
+                @include flex-row;
+                align-items: center;
+
+                &>.groupe-champ {
+                    &>input {
+                        text-transform: uppercase;
+                    }
+                }
+
+                &>.bouton-form {
+                    margin-left: 2rem;
+                }
+            }
+        }
+
+        &>.livraison-image {
+            @include flex-column;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+        }
+    }
 }
 
 /*[Couche « L'entreprise »]*/

@@ -1040,6 +1040,104 @@ ________________________________________________________*/
   -ms-grid-row: 12;
   -ms-grid-column: 1;
   grid-area: livraison;
+  padding: 4rem 15vw 7rem 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.livraison > h2 {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 2.5rem 2rem 2rem 2rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  border-bottom: 1px solid var(--noir);
+  line-height: 0.1em;
+  text-transform: uppercase;
+  color: var(--noir);
+}
+
+.livraison > h2 > span {
+  background: var(--blanc);
+  padding: 0 10px;
+}
+
+.livraison > .livraison-container {
+  padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.livraison > .livraison-container > .livraison-texte {
+  width: 60%;
+  padding-right: 5rem;
+}
+
+.livraison > .livraison-container > .livraison-texte > p {
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+  margin-bottom: 2rem;
+}
+
+.livraison > .livraison-container > .livraison-texte > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.livraison > .livraison-container > .livraison-texte > form > .groupe-champ > input {
+  text-transform: uppercase;
+}
+
+.livraison > .livraison-container > .livraison-texte > form > .bouton-form, .livraison > .livraison-container > .livraison-texte > form > .bouton-form-rouge, .pop-up.livraison > article.livraison-container > div.livraison-texte > form.actions-pop-up > a:last-of-type {
+  margin-left: 2rem;
+}
+
+.livraison > .livraison-container > .livraison-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
 }
 
 /*[Couche « L'entreprise »]*/
