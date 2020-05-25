@@ -17,4 +17,22 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', "VinyleController@index");
+// Réinstaller base de données
+Route::get('/installer', 'AppController@installer');
+
+
+// Routes User
+Route::get('/', function () {
+    return view('interfaceUser.accueil');
+});
+Route::get('/accueil', function () {
+    return view('interfaceUser.accueil');
+});
+Route::get('/vinyles', "VinyleController@index");
+Route::get('/vinyles/{vinyle}', "VinyleController@show");
+
+
+// Routes Admin
+Route::get('/admin', function () {
+    return view('interfaceUser.accueil');
+});

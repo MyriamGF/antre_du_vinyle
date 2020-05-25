@@ -1,0 +1,2 @@
+@extends("interfaceUser.index")
+{{$vinyle}}

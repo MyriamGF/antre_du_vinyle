@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Vinyle;
 
 class VinyleController extends Controller
 {
@@ -13,7 +14,11 @@ class VinyleController extends Controller
      */
     public function index()
     {
-        //
+        // $vinyles = Vinyle::all();
+        // return view("vinyles.index", ['vinyles' => $vinyles]);
+        $vinyle = Vinyle::fake();
+
+        return view("vinyles.index", ['vinyle' => $vinyle]);
     }
 
     /**
