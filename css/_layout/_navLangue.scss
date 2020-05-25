@@ -8,6 +8,7 @@
 ________________________________________________________*/
 
 .haut-page {
+    grid-area: navHaut;
     @include flex-column;
     justify-content: center;
     background-color: var(--blanc);

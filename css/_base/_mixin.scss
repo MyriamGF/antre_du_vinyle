@@ -18,3 +18,26 @@ ________________________________________________________*/
     display: flex;
     flex-direction: row;
 }
+
+/*////[Autres mixins]
+________________________________________________________*/
+
+/*[Mixin pour h2 span]*/
+
+@mixin titre-h2($couleurTexte) {
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin: 2.5rem 2rem 2rem 2rem;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    border-bottom: 1px solid $couleurTexte;
+    line-height: 0.1em;
+    text-transform: uppercase;
+    color: $couleurTexte;
+}
+
+@mixin titre-span($couleurFond){
+    background: $couleurFond;
+        padding: 0 10px;
+}

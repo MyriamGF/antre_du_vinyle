@@ -3,3 +3,81 @@
 //                  // LISTE ARTICLES //              //
 //                  _listeArticles.scss               //
 //----------------------------------------------------//
+
+/*////[Code SCSS pour la liste d'articles user]
+________________________________________________________*/
+
+.liste-vinyles {
+    grid-area: vinyle;
+}
+
+/*////[Code SCSS pour la liste d'articles admin]
+________________________________________________________*/
+
+.liste-articles-admin {
+    @include flex-column;
+    align-items: center;
+    background: var(--gris-pale);
+    padding: 0;
+
+    &>.article-admin {
+        @include flex-row;
+        background: var(--blanc);
+        padding: 1.5em;
+        margin-bottom: 1.5rem;
+        width: 100%;
+
+        &>img {
+            width: 200px;
+        }
+
+        &>.article-infos-admin {
+            @include flex-row;
+            margin-left: 1rem;
+            width: 100%;
+
+            &>.infos {
+                width: 60%;
+
+                &>li {
+                    margin: .7rem 0;
+
+                    &>span {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &>.actions-article {
+                @include flex-row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                padding-left: 2rem;
+                width: 40%;
+                text-align: center;
+
+                &>a {
+                    cursor: pointer;
+                    flex-basis: 10%;
+                    font-size: 2rem;
+                    color: var(--bleu);
+                    margin: 0 1rem;
+                    transition: color .3s;
+
+                    &:hover {
+                        color: var(--gris);
+                    }
+                }
+
+                &>p {
+                    flex-basis: 100%;
+                    font-size: 1.6rem;
+
+                    &>span {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

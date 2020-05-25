@@ -8,11 +8,12 @@
 ________________________________________________________*/
 
 .nav-principale {
+    grid-area: navPrincipale;
     border: 1px solid var(--gris-pale);
     text-align: center;
     z-index: 1000;
     background-color: var(--blanc);
-    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
     &>.menu {
         @include flex-row;

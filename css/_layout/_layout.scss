@@ -7,11 +7,12 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Importation
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
-@import '_footer';
-@import '_header';
+@import '_boutons';
 @import '_navLangue';
 @import '_navPrincipale';
+@import '_header';
+@import '_ariane';
+@import '_couchesInfos';
 @import '_listeArticles';
 @import '_gestionSite';
-@import '_boutons'
-
+@import '_footer';

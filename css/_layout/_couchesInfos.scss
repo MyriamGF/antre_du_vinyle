@@ -1,0 +1,129 @@
+//----------------------------------------------------//
+//                                                    //
+//               // COUCHES D'INFOS //                //
+//                _couchesInfos.scss                  //
+//----------------------------------------------------//
+
+/*////[Code SCSS pour les couches récurrentes de user]
+________________________________________________________*/
+
+/*[Couche de l'intro de la section (« Nos vinyles »)]*/
+.vinyles-intro {
+    grid-area: intro;
+
+}
+
+.suggestions {
+    grid-area: suggestions;
+}
+
+/*[Couche « Nouvel arrivage »]*/
+.nouveaute {
+    grid-area: nouveaute;
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15vw;
+    background-color: var(--jaune);
+
+    &>h2 {
+        @include titre-h2(var(--noir));
+
+        &>span {
+            @include titre-span(var(--jaune));
+        }
+    }
+
+    &>.nouveaute-container {
+
+        &>.nouveaute-carrousel {
+            &>a>.vinyle {
+                height: 80%;
+                display: block;
+                width: 80%;
+                margin-top: 1rem;
+
+                &>.vinyle-image {
+                    width: 100px;
+                }
+            }
+        }
+
+    }
+}
+
+/*[Couche « Heures d'ouverture »]*/
+.heures {
+    grid-area: heures;
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 15vw;
+
+    &>.heures-titre {
+        @include flex-column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--gris);
+
+        &>h2 {
+            @include titre-h2(var(--blanc));
+
+            &>span {
+                @include titre-span(var(--gris));
+            }
+        }
+    }
+
+    &>.heures-container {
+        width: 100%;
+        height: 100%;
+        background: url(../../images/couches/heures-1024.jpg) center;
+        background-size: cover;
+        @include flex-column;
+        align-items: center;
+        justify-content: center;
+        color: var(--blanc);
+        font-size: 1.2rem;
+        padding: 4em;
+
+        &>ul {
+            @include flex-row;
+            width: 280px;
+
+            &>li {
+                margin: 1rem;
+
+                &:first-of-type {
+                    font-weight: 500;
+                }
+
+                &:last-of-type {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+/*[Couche de la promotion]*/
+.promotion {
+    grid-area: promotion;
+    
+}
+
+/*[Couche « Comment commander »]*/
+.commander {
+    grid-area: commander;
+}
+
+/*[Couche « Livraison »]*/
+.livraison {
+    grid-area: livraison;
+}
+
+/*[Couche « L'entreprise »]*/
+.entreprise {
+    grid-area: entreprise;
+}

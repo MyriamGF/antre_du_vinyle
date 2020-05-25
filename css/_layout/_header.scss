@@ -8,6 +8,7 @@
 ________________________________________________________*/
 
 .header-accueil {
+    grid-area: header;
     position: relative;
     background: url(../../images/header/header-accueil-1024.jpg) center;
     background-size: cover;
@@ -29,6 +30,7 @@ ________________________________________________________*/
 }
 
 .header-vinyles {
+    grid-area: header;
     height: 360px;
     background: url(../../images/header/header-vinyles-1024.jpg) top center;
     background-size: cover;
