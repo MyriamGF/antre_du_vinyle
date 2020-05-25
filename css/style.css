@@ -808,7 +808,7 @@ ________________________________________________________*/
   margin: 0 auto;
   width: 100px;
   padding-top: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--noir);
 }
 
 .vinyle-details > .details-container {
@@ -819,24 +819,60 @@ ________________________________________________________*/
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .vinyle-details > .details-container > * {
-  margin: 0 3rem;
-}
-
-.vinyle-details > .details-container > .details-carrousel {
-  width: 60%;
+  margin: 0 2rem;
 }
 
 .vinyle-details > .details-container > .details-infos {
-  width: 40%;
+  position: relative;
+  width: 400px;
+  border: 1px solid var(--gris-pale);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30vw;
+}
+
+.vinyle-details > .details-container > .details-infos > .details-prix {
+  width: 100%;
+  padding: 1em 0;
+  background-color: var(--rouge);
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.vinyle-details > .details-container > .details-infos > ul > li {
+  margin: 2em 6em;
+  line-height: 1.3rem;
+}
+
+.vinyle-details > .details-container > .details-infos > ul > li > span {
+  font-weight: 500;
+}
+
+.vinyle-details > .details-container > .details-infos > ul > li.quantite {
+  text-align: center;
+  color: #6ad68b;
+  font-weight: bold;
+}
+
+.vinyle-details > .details-container > .details-infos > .bouton {
+  position: absolute;
+  bottom: 2rem;
 }
 
 /*////[Code SCSS pour les couches récurrentes de user]

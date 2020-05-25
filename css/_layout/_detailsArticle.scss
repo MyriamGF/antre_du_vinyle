@@ -27,25 +27,59 @@ ________________________________________________________*/
             margin: 0 auto;
             width: 100px;
             padding-top: 20px;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid var(--noir);
         }
     }
 
     &>.details-container {
         @include flex-row;
-        align-items: center;
         justify-content: center;
 
         &>* {
-            margin: 0 3rem;
+            margin: 0 2rem;
         }
 
-        &>.details-carrousel {
-            width: 60%;
-        }
+        &>.details-carrousel {}
 
         &>.details-infos {
-            width: 40%;
+            position: relative;
+            width: 400px;
+            border: 1px solid var(--gris-pale);
+            @include flex-column;
+            align-items: center;
+            height: 30vw;
+
+            &>.details-prix {
+                width: 100%;
+                padding: 1em 0;
+                background-color: var(--rouge);
+                color: var(--blanc);
+                font-weight: 600;
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            &>ul {
+                &>li {
+                    margin: 2em 6em;
+                    line-height: 1.3rem;
+
+                    &>span {
+                        font-weight: 500;
+                    }
+
+                    &.quantite {
+                        text-align: center;
+                        color: rgb(106, 214, 139);
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            &>.bouton {
+                position: absolute;
+                bottom: 2rem;
+            }
         }
     }
 }
