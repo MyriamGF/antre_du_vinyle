@@ -1,5 +1,9 @@
 @extends("interfaceUser.index")
     @section("contenu")
+        @component('interfaceUser.ariane')
+            @slot('nom')
+            @endslot
+        @endcomponent
         <section class="liste-vinyles">
         <div class="vinyles-container">
         @foreach($vinyles as $vinyle)

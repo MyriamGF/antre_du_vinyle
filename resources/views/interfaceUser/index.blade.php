@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Bibliothèque jQuery -->
     <script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')}}"></script>
+    <!-- Slick -->
+    <link href="../vendors/slick/slick-theme.css" rel="stylesheet">
+    <link href="../vendors/slick/slick.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <title>Nos vinyles | L'Antre du Vinyle</title>
@@ -75,8 +78,6 @@
             <img src="{{asset('../images/couches/disques.png')}}" alt="Disques en pile">
         </section>
 
-        @include('interfaceUser.ariane')
-
         @section('contenu')
 
         @show
@@ -89,6 +90,10 @@
 
     <!-- ACTIONS JQUERY / JAVASCRIPT -->
     <script src="{{asset('../js/actions.js')}}"></script>
+
+    <!-- SLICK - CARROUSELS -->
+    <script src="{{asset('../vendors/slick/slick.min.js')}}"></script>
+    <script src="{{asset('../js/carrousels.js')}}"></script>
 
 </body>
 

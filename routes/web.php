@@ -13,13 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/welcome', function () {
-//     return view('welcome');
-// });
-
-// Installer / update la base de données
-Route::get('/installer', 'AppController@installer');
-
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 // Routes User
 Route::get('/', function () {
@@ -35,6 +31,14 @@ Route::get('/vinyles/{vinyle}', "VinyleController@show")->name('detailsUser');
 
 
 // Routes Admin
+
+// Installer / update la base de données
+Route::get('/admin/installer', 'AppController@installer');
+
 Route::get('/admin', function () {
     return view('interfaceUser.accueil')->name('accueilAdmin');
 });
+Route::get('/admin/liste-articles', "VinyleController@index")->name('vinylesUser');
+Route::get('/vinyles/{vinyle}', "VinyleController@show")->name('detailsUser');
+
+
