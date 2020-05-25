@@ -214,6 +214,16 @@ ________________________________________________________*/
         font-size: 1.2rem;
         padding: 4em;
 
+        @include breakpoint-min(1200) {
+            background: url(../../images/couches/heures-1200.jpg) center;
+            background-size: cover;
+        }
+
+        @include breakpoint-min(1800) {
+            background: url(../../images/couches/heures-1800.jpg) center;
+            background-size: cover;
+        }
+
         &>ul {
             @include flex-row;
             width: 280px;
@@ -394,6 +404,16 @@ ________________________________________________________*/
     @include flex-column;
     justify-content: center;
     color: var(--blanc);
+
+    @include breakpoint-min(1200) {
+        background: url(../../images/couches/entreprise-1200.jpg) center;
+        background-size: cover;
+    }
+
+    @include breakpoint-min(1800) {
+        background: url(../../images/couches/entreprise-1800.jpg) center;
+        background-size: cover;
+    }
 
     &>.entreprise-container {
         background: rgba(0, 0, 0, 0.7);

@@ -27,6 +27,17 @@ ________________________________________________________*/
             font-size: 2.5rem;
         }
     }
+
+    @include breakpoint-min(1200) {
+        background: url(../../images/header/header-accueil-1200.jpg) center;
+        background-size: cover;
+    }
+
+    @include breakpoint-min(1800) {
+        background: url(../../images/header/header-accueil-1800.jpg) center;
+        background-size: cover;
+    }
+
 }
 
 .header-vinyles {
@@ -34,4 +45,14 @@ ________________________________________________________*/
     height: 360px;
     background: url(../../images/header/header-vinyles-1024.jpg) top center;
     background-size: cover;
+
+    @include breakpoint-min(1200) {
+        background: url(../../images/header/header-vinyles-1200.jpg) top center;
+        background-size: cover;
+    }
+
+    @include breakpoint-min(1800) {
+        background: url(../../images/header/header-vinyles-1800.jpg) top center;
+        background-size: cover;
+    }
 }

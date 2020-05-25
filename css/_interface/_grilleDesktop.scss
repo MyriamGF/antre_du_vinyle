@@ -4,54 +4,58 @@
 //               _grilleDesktop.scss                  //
 //----------------------------------------------------//
 
-/*////[Code SCSS structure GRID des pages de l'admin]
-________________________________________________________*/
-
-.interface-admin {
-    display: grid;
-    grid-template-areas:
-        'nav page';
-    grid-template-columns: 380px 1fr;
-
-    &>.nav-admin {
-        grid-area: nav;
-        background-color: var(--blanc);
-        height: 100%;
-        padding: 2em;
-        @include flex-column;
-        align-items: center;
-    }
-
-    &>.page-admin {
-        grid-area: page;
-        background-color: var(--gris-pale);
-        height: 100vh;
-        overflow-x: hidden;
-    }
-}
-
-
-/*////[Code SCSS structure GRID des pages user]
-________________________________________________________*/
-
-.interface-user {
-    width: 100vw;
+body {
     margin: 0 auto;
-    overflow: hidden;
-    display: grid;
-    grid-template-areas:
-        'navHaut'
-        'navPrincipale'
-        'header'
-        'intro'
-        'ariane'
-        'vinyle'
-        'suggestions'
-        'nouveaute'
-        'heures'
-        'promotion'
-        'commander'
-        'livraison'
-        'entreprise'
-        'footer';
+    overflow-x: hidden;
+
+    /*////[Code SCSS structure GRID des pages de l'admin]
+________________________________________________________*/
+
+    .interface-admin {
+        display: grid;
+        grid-template-areas:
+            'nav page';
+        grid-template-columns: 380px 1fr;
+
+        &>.nav-admin {
+            grid-area: nav;
+            background-color: var(--blanc);
+            height: 100%;
+            padding: 2em;
+            @include flex-column;
+            align-items: center;
+        }
+
+        &>.page-admin {
+            grid-area: page;
+            background-color: var(--gris-pale);
+            height: 100vh;
+            overflow-x: hidden;
+        }
+    }
+
+
+    /*////[Code SCSS structure GRID des pages user]
+________________________________________________________*/
+
+    .interface-user {
+        display: grid;
+        grid-template-areas:
+            'navHaut'
+            'navPrincipale'
+            'header'
+            'intro'
+            'ariane'
+            'vinyle'
+            'suggestions'
+            'nouveaute'
+            'heures'
+            'promotion'
+            'commander'
+            'livraison'
+            'entreprise'
+            'footer';
+
+        width: 100vw;
+    }
 }

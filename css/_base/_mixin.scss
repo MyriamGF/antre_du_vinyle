@@ -19,6 +19,16 @@ ________________________________________________________*/
     flex-direction: row;
 }
 
+/*////[Mixin pour les breakpoints]
+________________________________________________________*/
+
+@mixin breakpoint-min($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+}
+
+
 /*////[Autres mixins]
 ________________________________________________________*/
 

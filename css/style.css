@@ -212,14 +212,23 @@ ________________________________________________________*/
 ________________________________________________________*/
 /*[Display flex en colonne]*/
 /*[Display flex en rangée]*/
+/*////[Mixin pour les breakpoints]
+________________________________________________________*/
 /*////[Autres mixins]
 ________________________________________________________*/
 /*[Mixin pour h2 span]*/
 /*[Mixin pour bouton mise en forme générale]*/
 /*[Mixin pour pop-up mise en forme générale]*/
-/*////[Code SCSS structure GRID des pages de l'admin]
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  /*////[Code SCSS structure GRID des pages de l'admin]
 ________________________________________________________*/
-.interface-admin {
+  /*////[Code SCSS structure GRID des pages user]
+________________________________________________________*/
+}
+
+body .interface-admin {
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'nav page';
@@ -227,7 +236,7 @@ ________________________________________________________*/
       grid-template-columns: 380px 1fr;
 }
 
-.interface-admin > .nav-admin {
+body .interface-admin > .nav-admin {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: nav;
@@ -246,7 +255,7 @@ ________________________________________________________*/
           align-items: center;
 }
 
-.interface-admin > .page-admin {
+body .interface-admin > .page-admin {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: page;
@@ -255,15 +264,11 @@ ________________________________________________________*/
   overflow-x: hidden;
 }
 
-/*////[Code SCSS structure GRID des pages user]
-________________________________________________________*/
-.interface-user {
-  width: 100vw;
-  margin: 0 auto;
-  overflow: hidden;
+body .interface-user {
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'navHaut' 'navPrincipale' 'header' 'intro' 'ariane' 'vinyle' 'suggestions' 'nouveaute' 'heures' 'promotion' 'commander' 'livraison' 'entreprise' 'footer';
+  width: 100vw;
 }
 
 /*////[Code SCSS structure GRID pour la liste des articles user]
@@ -903,6 +908,20 @@ ________________________________________________________*/
   font-size: 2.5rem;
 }
 
+@media (min-width: 1200px) {
+  .header-accueil {
+    background: url(../../images/header/header-accueil-1200.jpg) center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1800px) {
+  .header-accueil {
+    background: url(../../images/header/header-accueil-1800.jpg) center;
+    background-size: cover;
+  }
+}
+
 .header-vinyles {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -910,6 +929,20 @@ ________________________________________________________*/
   height: 360px;
   background: url(../../images/header/header-vinyles-1024.jpg) top center;
   background-size: cover;
+}
+
+@media (min-width: 1200px) {
+  .header-vinyles {
+    background: url(../../images/header/header-vinyles-1200.jpg) top center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1800px) {
+  .header-vinyles {
+    background: url(../../images/header/header-vinyles-1800.jpg) top center;
+    background-size: cover;
+  }
 }
 
 /*////[Code SCSS pour le fil d'ariane]
@@ -1408,6 +1441,20 @@ ________________________________________________________*/
   padding: 4em;
 }
 
+@media (min-width: 1200px) {
+  .heures > .heures-container {
+    background: url(../../images/couches/heures-1200.jpg) center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1800px) {
+  .heures > .heures-container {
+    background: url(../../images/couches/heures-1800.jpg) center;
+    background-size: cover;
+  }
+}
+
 .heures > .heures-container > ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1699,6 +1746,20 @@ ________________________________________________________*/
       -ms-flex-pack: center;
           justify-content: center;
   color: var(--blanc);
+}
+
+@media (min-width: 1200px) {
+  .entreprise {
+    background: url(../../images/couches/entreprise-1200.jpg) center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1800px) {
+  .entreprise {
+    background: url(../../images/couches/entreprise-1800.jpg) center;
+    background-size: cover;
+  }
 }
 
 .entreprise > .entreprise-container {
