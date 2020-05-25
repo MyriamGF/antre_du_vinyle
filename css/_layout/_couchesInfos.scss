@@ -264,4 +264,43 @@ ________________________________________________________*/
 /*[Couche « L'entreprise »]*/
 .entreprise {
     grid-area: entreprise;
+    background: url(../../images/couches/entreprise-1024.jpg) center;
+    background-size: cover;
+    @include flex-column;
+    justify-content: center;
+    color: var(--blanc);
+
+    &>.entreprise-container {
+        background: rgba(0, 0, 0, 0.7);
+        width: 70%;
+        height: 100%;
+        padding: 5rem 5rem 5rem 15vw;
+
+        &>.entreprise-titre {
+            @include flex-column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            &>h2 {
+                @include titre-h2(var(--blanc));
+                text-align: left;
+
+                &>span {
+                    @include titre-span(var(--noir));
+                    border-radius: 30px;
+                    box-shadow: 0 0 20px var(--noir);
+                }
+            }
+        }
+
+        &>p {
+            line-height: 1.9rem;
+            margin: 1rem 0 0 0.6rem;
+
+            &>span {
+                font-style: italic;
+            }
+        }
+    }
 }

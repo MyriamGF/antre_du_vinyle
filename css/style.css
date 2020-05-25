@@ -1145,6 +1145,74 @@ ________________________________________________________*/
   -ms-grid-row: 13;
   -ms-grid-column: 1;
   grid-area: entreprise;
+  background: url(../../images/couches/entreprise-1024.jpg) center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--blanc);
+}
+
+.entreprise > .entreprise-container {
+  background: rgba(0, 0, 0, 0.7);
+  width: 70%;
+  height: 100%;
+  padding: 5rem 5rem 5rem 15vw;
+}
+
+.entreprise > .entreprise-container > .entreprise-titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.entreprise > .entreprise-container > .entreprise-titre > h2 {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 2.5rem 2rem 2rem 2rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  border-bottom: 1px solid var(--blanc);
+  line-height: 0.1em;
+  text-transform: uppercase;
+  color: var(--blanc);
+  text-align: left;
+}
+
+.entreprise > .entreprise-container > .entreprise-titre > h2 > span {
+  background: var(--noir);
+  padding: 0 10px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 20px var(--noir);
+          box-shadow: 0 0 20px var(--noir);
+}
+
+.entreprise > .entreprise-container > p {
+  line-height: 1.9rem;
+  margin: 1rem 0 0 0.6rem;
+}
+
+.entreprise > .entreprise-container > p > span {
+  font-style: italic;
 }
 
 /*////[Code SCSS pour la liste d'articles user]
