@@ -1028,6 +1028,10 @@ ________________________________________________________*/
 }
 
 /*[Couche « Nouvel arrivage »]*/
+.vinyle-image {
+  width: 100px;
+}
+
 .nouveaute {
   -ms-grid-row: 8;
   -ms-grid-column: 1;
@@ -1045,8 +1049,9 @@ ________________________________________________________*/
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 15vw;
+  padding: 3em 15vw;
   background-color: var(--jaune);
+  width: 100vw;
 }
 
 .nouveaute > h2 {
@@ -1067,15 +1072,81 @@ ________________________________________________________*/
   padding: 0 10px;
 }
 
-.nouveaute > .nouveaute-container > .nouveaute-carrousel > a > .vinyle {
-  height: 80%;
-  display: block;
-  width: 80%;
-  margin-top: 1rem;
+.nouveaute > .nouveaute-carrousel {
+  -webkit-box-shadow: 0 5px 5px -2px inset rgba(0, 0, 0, 0.2), 0 -5px 5px -2px inset rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px -2px inset rgba(0, 0, 0, 0.2), 0 -5px 5px -2px inset rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
-.nouveaute > .nouveaute-container > .nouveaute-carrousel > a > .vinyle > .vinyle-image {
-  width: 100px;
+.nouveaute > .nouveaute-carrousel > a {
+  color: var(--jaune);
+  font-size: 2.5rem;
+  text-shadow: 0 0 2px var(--noir);
+  -webkit-transition: color .2s, text-shadow .2s;
+  transition: color .2s, text-shadow .2s;
+  margin: 0 1rem;
+}
+
+.nouveaute > .nouveaute-carrousel > a:hover {
+  color: var(--noir);
+  text-shadow: none;
+}
+
+.nouveaute > .nouveaute-carrousel .vinyle > a {
+  margin: 1rem;
+  padding: 1em 2em;
+  background-color: var(--jaune);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color .2s, -webkit-box-shadow .2s;
+  transition: background-color .2s, -webkit-box-shadow .2s;
+  transition: background-color .2s, box-shadow .2s;
+  transition: background-color .2s, box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.nouveaute > .nouveaute-carrousel .vinyle > a > .vinyle-image {
+  width: 100%;
+}
+
+.nouveaute > .nouveaute-carrousel .vinyle > a > .vinyle-nom {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.nouveaute > .nouveaute-carrousel .vinyle > a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nouveaute > .bouton {
+  margin-top: 1rem;
 }
 
 /*[Couche « Heures d'ouverture »]*/

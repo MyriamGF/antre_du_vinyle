@@ -101,13 +101,18 @@ ________________________________________________________*/
 }
 
 /*[Couche « Nouvel arrivage »]*/
+.vinyle-image {
+    width: 100px;
+}
+
 .nouveaute {
     grid-area: nouveaute;
     @include flex-column;
     align-items: center;
     justify-content: center;
-    padding: 0 15vw;
+    padding: 3em 15vw;
     background-color: var(--jaune);
+    width: 100vw;
 
     &>h2 {
         @include titre-h2(var(--noir));
@@ -117,21 +122,61 @@ ________________________________________________________*/
         }
     }
 
-    &>.nouveaute-container {
+    &>.nouveaute-carrousel {
+        // box-shadow: 3px 3px 3px 3px 15px inset rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 5px -2px inset rgba(0, 0, 0, 0.2),
+            0 -5px 5px -2px inset rgba(0, 0, 0, 0.2);
+        position: relative;
+        width: 100%;
+        margin: auto 0;
+        @include flex-row;
+        align-items: center;
+        text-align: center;
 
-        &>.nouveaute-carrousel {
-            &>a>.vinyle {
-                height: 80%;
-                display: block;
-                width: 80%;
-                margin-top: 1rem;
+        &>a {
+            color: var(--jaune);
+            font-size: 2.5rem;
+            text-shadow: 0 0 2px var(--noir);
+            transition: color .2s, text-shadow .2s;
+            margin: 0 1rem;
 
-                &>.vinyle-image {
-                    width: 100px;
-                }
+            &:hover {
+                color: var(--noir);
+                text-shadow: none;
             }
         }
 
+        & .vinyle {
+            &>a {
+                margin: 1rem;
+                padding: 1em 2em;
+                background-color: var(--jaune);
+                @include flex-column;
+                align-items: center;
+                justify-content: center;
+                transition: background-color .2s, box-shadow .2s;
+
+                &>.vinyle-image {
+                    width: 100%;
+                }
+
+                &>.vinyle-nom {
+                    margin-top: 1rem;
+                    text-transform: uppercase;
+                    font-style: italic;
+                    font-weight: 600;
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.3);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+
+    &>.bouton {
+        margin-top: 1rem;
     }
 }
 

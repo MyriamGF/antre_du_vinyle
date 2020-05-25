@@ -4,10 +4,11 @@ $(function () {
     $('.carrousel-accueil').slick({
         autoplay: true,
         arrows: true,
-        dots: true,
+        dots: false,
+        prevArrow: '<a href="" class="slick-arrow prev-arrow"><i class="fas fa-chevron-left"></i></a>',
+        nextArrow: '<a href="" class="slick-arrow next-arrow"><i class="fas fa-chevron-right"></i></i></a>',
         slidesToShow: 3,
-        prevArrow: '<a href="" class="slick-arrow prev-arrow">PREV</a>',
-        nextArrow: '<a href="" class="slick-arrow next-arrow">NEXT</a>',
+        infinity: true,
     });
 
 
