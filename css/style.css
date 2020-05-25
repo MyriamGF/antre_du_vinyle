@@ -728,6 +728,70 @@ ________________________________________________________*/
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: intro;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4rem 15vw 7rem 15vw;
+}
+
+.vinyles-intro > h2 {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 2.5rem 2rem 2rem 2rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  border-bottom: 1px solid var(--noir);
+  line-height: 0.1em;
+  text-transform: uppercase;
+  color: var(--noir);
+}
+
+.vinyles-intro > h2 > span {
+  background: var(--blanc);
+  padding: 0 10px;
+}
+
+.vinyles-intro > .intro-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.vinyles-intro > .intro-container > p {
+  width: 40%;
+  margin-top: 3rem;
+  line-height: 1.9rem;
+}
+
+.vinyles-intro > img {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
 }
 
 .suggestions {
@@ -1162,9 +1226,9 @@ ________________________________________________________*/
 
 .entreprise > .entreprise-container {
   background: rgba(0, 0, 0, 0.7);
-  width: 70%;
+  width: 100%;
   height: 100%;
-  padding: 5rem 5rem 5rem 15vw;
+  padding: 8rem 15vw;
 }
 
 .entreprise > .entreprise-container > .entreprise-titre {
@@ -1208,7 +1272,7 @@ ________________________________________________________*/
 
 .entreprise > .entreprise-container > p {
   line-height: 1.9rem;
-  margin: 1rem 0 0 0.6rem;
+  margin: 1rem 6rem 0 6rem;
 }
 
 .entreprise > .entreprise-container > p > span {
