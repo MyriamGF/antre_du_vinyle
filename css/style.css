@@ -965,6 +965,74 @@ ________________________________________________________*/
   -ms-grid-row: 11;
   -ms-grid-column: 1;
   grid-area: commander;
+  background-color: var(--noir);
+  color: var(--blanc);
+  padding: 4rem 15vw 7rem 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.commander > h2 {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 2.5rem 2rem 2rem 2rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  border-bottom: 1px solid var(--blanc);
+  line-height: 0.1em;
+  text-transform: uppercase;
+  color: var(--blanc);
+}
+
+.commander > h2 > span {
+  background: var(--noir);
+  padding: 0 10px;
+}
+
+.commander > .commander-etapes {
+  margin-top: 2rem;
+  width: 60%;
+}
+
+.commander > .commander-etapes > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 2rem 0;
+}
+
+.commander > .commander-etapes > ul > li {
+  line-height: 1.5rem;
+}
+
+.commander > .commander-etapes > ul > li > span {
+  color: var(--rouge);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 5rem;
+}
+
+.commander > .commander-etapes > ul > li:last-of-type {
+  margin-left: 1rem;
 }
 
 /*[Couche « Livraison »]*/
