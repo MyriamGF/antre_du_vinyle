@@ -261,6 +261,15 @@ ________________________________________________________*/
       grid-template-areas: 'navHaut'  'navPrincipale'  'header'  'intro'  'ariane'  'vinyle'  'suggestions'  'nouveaute'  'heures'  'promotion'  'commander'  'livraison'  'entreprise'  'footer';
 }
 
+/*////[Code SCSS structure GRID pour la liste des articles user]
+________________________________________________________*/
+.liste-vinyles > .vinyles-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+}
+
 /*////[Code SCSS général pour les boutons]
 ________________________________________________________*/
 .bouton {
@@ -1320,6 +1329,63 @@ ________________________________________________________*/
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: vinyle;
+  padding: 3rem 3rem;
+}
+
+.liste-vinyles > .vinyles-container {
+  border: 1px solid var(--gris-pale);
+}
+
+.liste-vinyles > .vinyles-container > a {
+  padding: 2em;
+  border: 1px solid var(--gris-pale);
+  background-color: var(--blanc);
+  -webkit-transition: background-color .2s, -webkit-box-shadow .2s;
+  transition: background-color .2s, -webkit-box-shadow .2s;
+  transition: background-color .2s, box-shadow .2s;
+  transition: background-color .2s, box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.liste-vinyles > .vinyles-container > a > .vinyle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.liste-vinyles > .vinyles-container > a > .vinyle > * {
+  margin-top: 1rem;
+}
+
+.liste-vinyles > .vinyles-container > a > .vinyle > .vinyle-image {
+  width: 100%;
+}
+
+.liste-vinyles > .vinyles-container > a > .vinyle > .vinyle-nom {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.liste-vinyles > .vinyles-container > a > .vinyle > .vinyle-prix {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+}
+
+.liste-vinyles > .vinyles-container > a:hover {
+  background-color: var(--gris-pale);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /*////[Code SCSS pour la liste d'articles admin]

@@ -3,3 +3,13 @@
 //             // CONTENU SOUS-GRILLE //              //
 //             _sousGrilleContenu.scss                //
 //----------------------------------------------------//
+
+/*////[Code SCSS structure GRID pour la liste des articles user]
+________________________________________________________*/
+
+.liste-vinyles {
+    &>.vinyles-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+}
