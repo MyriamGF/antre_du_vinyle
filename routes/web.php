@@ -36,9 +36,15 @@ Route::get('/vinyles/{vinyle}', "VinyleController@show")->name('detailsUser');
 Route::get('/admin/installer', 'AppController@installer');
 
 Route::get('/admin', function () {
-    return view('interfaceUser.accueil')->name('accueilAdmin');
-});
-Route::get('/admin/liste-articles', "VinyleController@index")->name('vinylesUser');
-Route::get('/vinyles/{vinyle}', "VinyleController@show")->name('detailsUser');
+    return view('interfaceAdmin.accueil');
+})->name('accueilAdmin');
 
+Route::get('/admin-accueil', function () {
+    return view('interfaceAdmin.accueil');
+})->name('accueilAdmin');
 
+Route::get('/admin-connexion', function () {
+    return view('interfaceAdmin.connexion');
+})->name('connexionAdmin');
+
+Route::get('/admin-articles', "VinyleController@indexAdmin")->name('articles');

@@ -19,6 +19,13 @@ class VinyleController extends Controller
         return view("vinyles.index", ['vinyles' => $vinyles]);
     }
 
+    public function indexAdmin()
+    {
+        // $vinyles = Vinyle::fake();
+        $articles = Vinyle::all();
+        return view("articles.index", ['articles' => $articles]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
