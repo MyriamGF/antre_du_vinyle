@@ -42,5 +42,4 @@
 {{Form::submit('Enregistrer', array('class' => 'bouton-form-rouge'))}}
 <a class="bouton-annuler" href="{{action('VinyleController@indexAdmin')}}" class="bouton" style="margin-top:1rem">Annuler</a>
 
-
 {{Form::close()}}

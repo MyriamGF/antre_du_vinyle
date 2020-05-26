@@ -38,6 +38,7 @@ ________________________________________________________*/
     }
 
     &>.contenu {
+
         @include flex-column;
         align-items: center;
         margin-top: 50px;
@@ -152,6 +153,24 @@ ________________________________________________________*/
                             z-index: 1;
                         }
                     }
+                }
+            }
+        }
+
+        &>.div-sup {
+            position: relative;
+            width: 50vw;
+
+            &>.sup-form {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                margin: 1rem;
+                font-size: 2rem;
+                color: var(--noir);
+                transition: color .2s;
+                &:hover {
+                    color: var(--rouge);
                 }
             }
         }

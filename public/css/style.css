@@ -2009,6 +2009,26 @@ ________________________________________________________*/
   z-index: 1;
 }
 
+.page-admin > .contenu > .div-sup {
+  position: relative;
+  width: 50vw;
+}
+
+.page-admin > .contenu > .div-sup > .sup-form {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+  font-size: 2rem;
+  color: var(--noir);
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.page-admin > .contenu > .div-sup > .sup-form:hover {
+  color: var(--rouge);
+}
+
 /*////[Code SCSS footer]
 ________________________________________________________*/
 footer {

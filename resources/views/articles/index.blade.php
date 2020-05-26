@@ -2,6 +2,7 @@
 @section("contenu")
 <h3>Liste des articles</h3>
 <section class="liste-articles-admin">
+    <a href="{{action('VinyleController@create')}}" class="bouton" style="margin-bottom:1rem">Ajouter un produit</a>
     @foreach($vinyles as $vinyle)
     <article class="article-admin">
         <img src="{{asset('images/disques/'.$vinyle->dossierImg.'/avant.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='{{asset('images/svg/logo-normal-seul.svg')}}';">
