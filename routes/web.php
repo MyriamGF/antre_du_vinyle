@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 //------- INSTALLER / RÉINITIALISER BASE DE DONNÉES
 
-Route::get('/admin/installer', 'AppController@installer');
+Route::get('/installer', 'AppController@installer');
 
 
 //------- ROUTES USER
