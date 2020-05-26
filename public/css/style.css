@@ -169,7 +169,7 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-label, input, button {
+label, input, button, textarea {
   outline: none;
 }
 
@@ -2007,6 +2007,14 @@ ________________________________________________________*/
   top: 0px;
   left: 0px;
   z-index: 1;
+}
+
+.page-admin > .contenu > .form-admin > .groupe-erreur {
+  width: 70%;
+  color: var(--rouge);
+  font-size: .85rem;
+  text-align: right;
+  margin-top: .5rem;
 }
 
 .page-admin > .contenu > .div-sup {

@@ -155,6 +155,14 @@ ________________________________________________________*/
                     }
                 }
             }
+
+            &>.groupe-erreur {
+                width: 70%;
+                color: var(--rouge);
+                font-size: .85rem;
+                text-align: right;
+                margin-top: .5rem;
+            }
         }
 
         &>.div-sup {
@@ -169,6 +177,7 @@ ________________________________________________________*/
                 font-size: 2rem;
                 color: var(--noir);
                 transition: color .2s;
+
                 &:hover {
                     color: var(--rouge);
                 }

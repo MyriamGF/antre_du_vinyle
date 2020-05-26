@@ -46,6 +46,7 @@ class VinyleController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(Vinyle::$regles);
         $donnees = $request->all();
         $vinyle = new Vinyle();
         $vinyle->fill($donnees);
@@ -95,6 +96,7 @@ class VinyleController extends Controller
      */
     public function update(Request $request, Vinyle $vinyle)
     {
+        $request->validate(Vinyle::$regles);
         $donnees = $request->all();
         $vinyle->fill($donnees);
         $vinyle->save();

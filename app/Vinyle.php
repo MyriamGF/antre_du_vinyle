@@ -17,7 +17,19 @@ class Vinyle extends Model
         'prix',
         'quantite',
         'dossierImg',
-    
+
+    ];
+
+    static public $regles = [
+        'nomAlbum' => 'required',
+        'artiste' => 'required',
+        'genre' => 'required',
+        'sortie' => 'required',
+        'dureeMin' => 'required',
+        'dureeSec' => 'required',
+        'prix' => 'required',
+        'quantite' => 'required',
+        'dossierImg' => 'required',
     ];
 
     static public function fake()

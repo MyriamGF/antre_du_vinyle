@@ -40,6 +40,7 @@
     <section class="suggestions">
         <h3>Vous pourriez aussi aimer...</h3>
         <div class="suggestions-container">
+            
             <a href="vinyle.html">
                 <article class="vinyle">
                     <img class="vinyle-image" src="../images/disques/game-dames-and-guitar-thangs/avant.jpg" alt="Couverture de l'album Game, Dames and
@@ -62,7 +63,6 @@
                         Guitar Thangs - Eddie Hazel</p>
                 </article>
             </a>
-
         </div>
     </section>
 @endsection
