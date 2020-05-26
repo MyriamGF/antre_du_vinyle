@@ -111,7 +111,7 @@
                 </article>
 
             </div>
-            <a class="bouton" href="{{route('vinylesUser')}}">Tous nos vinyles</a>
+            <a class="bouton" href="{{action('VinyleController@index')}}">Tous nos vinyles</a>
         </section>
 
         <section id="heures" class="heures">

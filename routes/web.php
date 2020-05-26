@@ -13,38 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
 
-// Routes User
-Route::get('/', function () {
-    return view('interfaceUser.accueil');
-})->name('accueilUser');
+//------- INSTALLER / RÉINITIALISER BASE DE DONNÉES
 
-Route::get('/accueil', function () {
-    return view('interfaceUser.accueil');
-})->name('accueilUser');
-
-Route::get('/vinyles', "VinyleController@index")->name('vinylesUser');
-Route::get('/vinyles/{vinyle}', "VinyleController@show")->name('detailsUser');
-
-
-// Routes Admin
-
-// Installer / update la base de données
 Route::get('/admin/installer', 'AppController@installer');
 
-Route::get('/admin', function () {
-    return view('interfaceAdmin.accueil');
-})->name('accueilAdmin');
 
-Route::get('/admin-accueil', function () {
-    return view('interfaceAdmin.accueil');
-})->name('accueilAdmin');
+//------- ROUTES USER
 
-Route::get('/admin-connexion', function () {
-    return view('interfaceAdmin.connexion');
-})->name('connexionAdmin');
+Route::view('/', 'interfaceUser.accueil')->name('accueilUser');
+Route::view('/accueil', 'interfaceUser.accueil')->name('accueilUser');
 
-Route::get('/admin-articles', "VinyleController@indexAdmin")->name('articles');
+Route::get('/vinyles', "VinyleController@index");
+Route::get('/vinyles/{vinyle}', "VinyleController@show")->where('vinyle', '[0-9]+');
+
+
+//------- ROUTES ADMIN
+
+Route::view('/gestion', 'interfaceAdmin.accueil')->name('accueilAdmin');
+Route::view('/gestion/connexion', 'interfaceAdmin.connexion')->name('connexionAdmin');
+
+Route::get('/gestion/articles', "VinyleController@indexAdmin");
+Route::get('/gestion/articles/{vinyle}', "VinyleController@showAdmin")->where('vinyle', '[0-9]+');
+
+Route::get('/gestion/articles/ajouter', "VinyleController@create");
+Route::post('/gestion/articles/ajouter', "VinyleController@store");
+
+Route::get('/gestion/{vinyle}/modifier', "VinyleController@edit")->where('vinyle', '[0-9]+');
+Route::post('/gestion/{vinyle}/modifier', "VinyleController@update")->where('vinyle', '[0-9]+');
+Route::get('/gestion/{vinyle}/effacer', "VinyleController@destroy")->where('vinyle', '[0-9]+');

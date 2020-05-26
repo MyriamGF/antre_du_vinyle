@@ -368,6 +368,7 @@ ________________________________________________________*/
           align-items: center;
   background: var(--gris-pale);
   padding: 0;
+  width: 100%;
 }
 
 .contenu > section.liste-articles-admin > .article-admin {
@@ -443,6 +444,12 @@ ________________________________________________________*/
 
 .contenu > section.liste-articles-admin > .article-admin > .article-infos-admin > .actions-article > a:hover {
   color: var(--gris);
+}
+
+.contenu > section.liste-articles-admin > .article-admin > .article-infos-admin > .actions-article > a > .act-tag {
+  font-size: 1rem;
+  margin-top: .5rem;
+  text-align: center;
 }
 
 .contenu > section.liste-articles-admin > .article-admin > .article-infos-admin > .actions-article > p {
@@ -1879,6 +1886,7 @@ ________________________________________________________*/
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  line-height: 2.1rem;
 }
 
 .page-admin > .contenu > .section-index-admin {
@@ -1934,7 +1942,7 @@ ________________________________________________________*/
   margin-bottom: 1rem;
 }
 
-.page-admin > .contenu > form {
+.page-admin > .contenu > .form-admin {
   padding: 2em;
   width: 50vw;
   -webkit-box-align: center;
@@ -1943,58 +1951,58 @@ ________________________________________________________*/
   background: var(--blanc);
 }
 
-.page-admin > .contenu > form > .groupe-champ {
+.page-admin > .contenu > .form-admin > .groupe-champ {
   width: 70%;
 }
 
-.page-admin > .contenu > form > .groupe-champ .liste-images img {
+.page-admin > .contenu > .form-admin > .groupe-champ .liste-images img {
   z-index: 1000;
   width: 100px;
   padding: 1em;
 }
 
-.page-admin > .contenu > form > .groupe-champ > label {
+.page-admin > .contenu > .form-admin > .groupe-champ > label {
   font-weight: 500;
 }
 
-.page-admin > .contenu > form > .groupe-champ > input {
+.page-admin > .contenu > .form-admin > .groupe-champ > input {
   width: 300px;
   margin-left: auto;
 }
 
-.page-admin > .contenu > form > .groupe-champ > input.duree {
+.page-admin > .contenu > .form-admin > .groupe-champ > input.duree {
   text-align: center;
-  width: 149px;
+  max-width: 149px;
 }
 
-.page-admin > .contenu > form > .groupe-champ > input.duree:last-of-type {
+.page-admin > .contenu > .form-admin > .groupe-champ > input.duree:last-of-type {
   margin-left: 0;
 }
 
-.page-admin > .contenu > form > .groupe-champ:last-of-type {
+.page-admin > .contenu > .form-admin > .groupe-champ:last-of-type {
   margin: 3rem 0;
 }
 
-.page-admin > .contenu > form > .groupe-champ:last-of-type > .input-image {
+.page-admin > .contenu > .form-admin > .groupe-champ:last-of-type > .input-image {
   position: relative;
   margin-left: 7rem;
 }
 
-.page-admin > .contenu > form > .groupe-champ:last-of-type > .input-image > .cherche-image {
+.page-admin > .contenu > .form-admin > .groupe-champ:last-of-type > .input-image > .cherche-image {
   position: relative;
   text-align: right;
   opacity: 0;
   z-index: 2;
 }
 
-.page-admin > .contenu > form > .groupe-champ:last-of-type > .input-image > .cherche-image:hover + .fake-input-image > .bouton {
+.page-admin > .contenu > .form-admin > .groupe-champ:last-of-type > .input-image > .cherche-image:hover + .fake-input-image > .bouton {
   -webkit-box-shadow: none;
           box-shadow: none;
   color: var(--blanc) !important;
   background-color: var(--bleu);
 }
 
-.page-admin > .contenu > form > .groupe-champ:last-of-type > .input-image > .fake-input-image {
+.page-admin > .contenu > .form-admin > .groupe-champ:last-of-type > .input-image > .fake-input-image {
   position: absolute;
   top: 0px;
   left: 0px;

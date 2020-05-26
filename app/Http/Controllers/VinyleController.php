@@ -14,7 +14,9 @@ class VinyleController extends Controller
      */
     public function index()
     {
-        // $vinyles = Vinyle::fake();
+        // $vinyle = Vinyle::fake();
+        // return view("vinyles.index", ['vinyle' => $vinyle]);
+
         $vinyles = Vinyle::all();
         return view("vinyles.index", ['vinyles' => $vinyles]);
     }
@@ -22,8 +24,8 @@ class VinyleController extends Controller
     public function indexAdmin()
     {
         // $vinyles = Vinyle::fake();
-        $articles = Vinyle::all();
-        return view("articles.index", ['articles' => $articles]);
+        $vinyles = Vinyle::all();
+        return view("articles.index", ['vinyles' => $vinyles]);
     }
 
     /**
@@ -31,9 +33,9 @@ class VinyleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Vinyle $vinyle)
     {
-        //
+        return view('articles.create', ['vinyle' => $vinyle]);
     }
 
     /**
@@ -44,7 +46,11 @@ class VinyleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $donnees = $request->all();
+        $vinyle = new Vinyle();
+        $vinyle->fill($donnees);
+        $vinyle->save();
+        return redirect()->action("VinyleController@showAdmin", $vinyle);
     }
 
     /**
@@ -59,14 +65,25 @@ class VinyleController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function showAdmin(Vinyle $vinyle)
+    {
+        return view("articles.show", ['vinyle' => $vinyle]);
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Vinyle $vinyle)
     {
-        //
+        return view("articles.edit", ['vinyle' => $vinyle]);
     }
 
     /**
@@ -76,9 +93,12 @@ class VinyleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Vinyle $vinyle)
     {
-        //
+        $donnees = $request->all();
+        $vinyle->fill($donnees);
+        $vinyle->save();
+        return redirect()->action("VinyleController@showAdmin", $vinyle);
     }
 
     /**
@@ -87,8 +107,9 @@ class VinyleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Vinyle $vinyle)
     {
-        //
+        $vinyle->delete();
+        return redirect()->action('VinyleController@indexAdmin');
     }
 }

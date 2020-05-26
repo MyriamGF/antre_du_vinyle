@@ -48,6 +48,7 @@ ________________________________________________________*/
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 2rem;
+            line-height: 2.1rem;
         }
 
         &>.section-index-admin {
@@ -88,7 +89,7 @@ ________________________________________________________*/
             }
         }
 
-        &>form {
+        &>.form-admin {
             padding: 2em;
             width: 50vw;
             align-items: center;
@@ -116,7 +117,7 @@ ________________________________________________________*/
 
                     &.duree {
                         text-align: center;
-                        width: 149px;
+                        max-width: 149px;
 
                         &:last-of-type {
                             margin-left: 0;

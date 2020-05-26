@@ -10,15 +10,15 @@
         <div class="details-container">
             <div class="details-carrousel">
                 <div class="carrousel-vinyle" style="width: 30vw;">
-                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/avant.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='../images/svg/logo-normal-seul.svg';">
-                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/arriere.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='../images/svg/logo-normal-seul.svg';">
-                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/disque.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='../images/svg/logo-normal-seul.svg';">
+                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/avant.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='{{asset('images/svg/logo-normal-seul.svg')}}';">
+                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/arriere.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='{{asset('images/svg/logo-normal-seul.svg')}}';">
+                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/disque.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='{{asset('images/svg/logo-normal-seul.svg')}}';">
 
                 </div>
                 <div class="carrousel-vignettes" style="width: 30vw;">
-                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/avant.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='../images/svg/logo-normal-seul.svg';">
-                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/arriere.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='../images/svg/logo-normal-seul.svg';">
-                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/disque.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='../images/svg/logo-normal-seul.svg';">
+                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/avant.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='{{asset('images/svg/logo-normal-seul.svg')}}';">
+                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/arriere.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='{{asset('images/svg/logo-normal-seul.svg')}}';">
+                    <img src="{{asset('../images/disques/'.$vinyle->dossierImg.'/disque.jpg')}}" alt="{{$vinyle->nomAlbum}}" onerror="this.onerror=null;this.src='{{asset('images/svg/logo-normal-seul.svg')}}';">
                 </div>
             </div>
             <div class="details-infos">

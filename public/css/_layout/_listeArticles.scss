@@ -64,6 +64,7 @@ ________________________________________________________*/
         align-items: center;
         background: var(--gris-pale);
         padding: 0;
+        width: 100%;
 
         &>.article-admin {
             @include flex-row;
@@ -111,6 +112,11 @@ ________________________________________________________*/
 
                         &:hover {
                             color: var(--gris);
+                        }
+                        &>.act-tag{
+                            font-size: 1rem;
+                            margin-top: .5rem;
+                            text-align: center;
                         }
                     }
 

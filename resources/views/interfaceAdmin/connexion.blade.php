@@ -14,13 +14,13 @@
     <!-- Bibliothèque jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Connexion | ADV Administration</title>
 </head>
 
 <body>
     <div class="connexion-admin">
-        <img src="../images/svg/logo-normal.svg" alt="Logo l'Antre du Vinyle">
+        <img src="{{asset('images/svg/logo-normal.svg')}}" alt="Logo l'Antre du Vinyle">
         <h1>Module de gestion du site</h1>
         <form action="{{route('accueilAdmin')}}">
             <div class="groupe-champ">
@@ -38,7 +38,7 @@
     </div>
 
     <!-- ACTIONS JQUERY / JAVASCRIPT -->
-    <script src="../js/actions.js"></script>
+    <script src="{{asset('js/actions.js')}}"></script>
 
 </body>
 
